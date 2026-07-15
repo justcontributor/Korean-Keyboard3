@@ -35,4 +35,4 @@ Work In Process!
 
 ## Disclaimer
   * 모종의 이유로 자판 레이아웃에 대한 독점적 권리를 주장하고 싶으신 경우, 이슈 트래커에 문의해 주세요. 프로젝트에서 제외하는 등의 조치를 진행할 수 있습니다.
-  * 본 프로젝트에는 상용 키보드 레이아웃을 재구현한 Keyboard 3 파일이 포함되어 있습니다. 사용 시 발생할 수 있는 잠재적인 문제에 대해서는 [LICENSE.md]()를 참고해주시기 바랍니다.
+  * 본 프로젝트에는 상용 키보드 레이아웃을 재구현한 Keyboard 3 파일이 포함되어 있습니다. 사용 시 발생할 수 있는 잠재적인 문제에 대해서는 [LICENSE.md](https://github.com/justcontributor/Korean-Keyboard3/LICENSE.md)를 참고해주시기 바랍니다.
