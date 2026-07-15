@@ -1,0 +1,3 @@
+This project includes commercial keyboard layouts. While we do not restrict the use, modification, or redistribution of these files, the original rights holders of these layouts may enforce their legal rights, such as patents or copyrights.
+
+Please note that in such events, this project assumes no liability for any subsequent use, modification, or redistribution, nor can we provide any legal assistance.
