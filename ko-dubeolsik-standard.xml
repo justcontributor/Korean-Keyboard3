@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
+<keyboard3 locale="ko" conformsTo="48">
+    <info name="Korean Dubeolsik Standard" indicator="KO"/>
+    <!-- 한국어 두벌식 표준 (KS X 5002) -->
+    <displays>
+        <display keyId="base" display="한글" />
+        <display keyId="shift" display="\u{21EA}" />
+        <display keyId="unshift" display="\u{21EA}'" />
+        <display keyId="symbol" display="!#1" />
+        <display keyId="symbol-1" display="1/2" />
+        <display keyId="symbol-2" display="2/2" />
+        <display keyId="bksp" display="⌫" />
+        <display keyId="enter" display="⏎" />
+        <display keyId="extra" display="한/영" />
+    </displays>
+
+    <keys>
+        <key id="ko-q" output="ㅂ"/>
+        <key id="ko-w" output="ㅈ"/>
+        <key id="ko-e" output="ㄷ"/>
+        <key id="ko-r" output="ㄱ"/>
+        <key id="ko-t" output="ㅅ"/>
+        <key id="ko-y" output="ㅛ"/>
+        <key id="ko-u" output="ㅕ"/>
+        <key id="ko-i" output="ㅑ"/>
+        <key id="ko-o" output="ㅐ"/>
+        <key id="ko-p" output="ㅔ"/>
+        
+        <key id="ko-a" output="ㅁ"/>
+        <key id="ko-s" output="ㄴ"/>
+        <key id="ko-d" output="ㅇ"/>
+        <key id="ko-f" output="ㄹ"/>
+        <key id="ko-g" output="ㅎ"/>
+        <key id="ko-h" output="ㅗ"/>
+        <key id="ko-j" output="ㅓ"/>
+        <key id="ko-k" output="ㅏ"/>
+        <key id="ko-l" output="ㅣ"/>
+        
+        <key id="ko-z" output="ㅋ"/>
+        <key id="ko-x" output="ㅌ"/>
+        <key id="ko-c" output="ㅊ"/>
+        <key id="ko-v" output="ㅍ"/>
+        <key id="ko-b" output="ㅠ"/>
+        <key id="ko-n" output="ㅜ"/>
+        <key id="ko-m" output="ㅡ"/>
+        
+        <key id="ko-Q" output="ㅃ"/>
+        <key id="ko-W" output="ㅉ"/>
+        <key id="ko-E" output="ㄸ"/>
+        <key id="ko-R" output="ㄲ"/>
+        <key id="ko-T" output="ㅆ"/>
+        <key id="ko-O" output="ㅒ"/>
+        <key id="ko-P" output="ㅖ"/>
+
+        <key id="base" layerId="base" width="1.5" />
+        <key id="shift" layerId="touch-shift" width="1.5" />
+        <key id="unshift" layerId="base" width="1.5" />
+        <key id="symbol" layerId="symbol-1" width="1.5" />
+        <key id="symbol-1" layerId="symbol-1" width="1.5" />
+        <key id="symbol-2" layerId="symbol-2" width="1.5" />
+        
+        <key id="bksp" output="" stretch="true" />
+        <key id="extra" layerId="english-base" />
+        <key id="enter" output="" width="1.6" />
+        <key id="space" output=" " stretch="true" />
+        <key id="comma" output="," />
+        <key id="period" output="." />
+
+        <key id="1" output="1" />
+        <key id="2" output="2" />
+        <key id="3" output="3" />
+        <key id="4" output="4" />
+        <key id="5" output="5" />
+        <key id="6" output="6" />
+        <key id="7" output="7" />
+        <key id="8" output="8" />
+        <key id="9" output="9" />
+        <key id="0" output="0" />
+
+        <key id="bang" output="!" />
+        <key id="at" output="@" />
+        <key id="hash" output="#" />
+        <key id="dollar" output="$" />
+        <key id="percent" output="%" />
+        <key id="caret" output="^" />
+        <key id="amp" output="&amp;" />
+        <key id="asterisk" output="*" />
+        <key id="open-paren" output="(" />
+        <key id="close-paren" output=")" />
+        <key id="lt" output="&lt;" />
+        <key id="gt" output="&gt;" />
+    </keys>
+
+    <layers formId="iso">
+        <layer id="base" modifiers="none">
+            <row keys="1 2 3 4 5 6 7 8 9 0" />
+            <row keys="ko-q ko-w ko-e ko-r ko-t ko-y ko-u ko-i ko-o ko-p" />
+            <row keys="ko-a ko-s ko-d ko-f ko-g ko-h ko-j ko-k ko-l" />
+            <row keys="ko-z ko-x ko-c ko-v ko-b ko-n ko-m comma period" />
+        </layer>
+
+        <layer id="shift" modifiers="shift">
+            <row keys="bang at hash dollar percent caret amp asterisk open-paren close-paren" />
+            <row keys="ko-Q ko-W ko-E ko-R ko-T ko-y ko-u ko-i ko-O ko-P" />
+            <row keys="ko-a ko-s ko-d ko-f ko-g ko-h ko-j ko-k ko-l" />
+            <row keys="ko-z ko-x ko-c ko-v ko-b ko-n ko-m lt gt" />
+        </layer>
+    </layers>
+    
+    <layers formId="touch">
+        <layer id="base">
+            <row keys="ko-q ko-w ko-e ko-r ko-t ko-y ko-u ko-i ko-o ko-p" />
+            <row keys="ko-a ko-s ko-d ko-f ko-g ko-h ko-j ko-k ko-l" />
+            <row keys="shift ko-z ko-x ko-c ko-v ko-b ko-n ko-m bksp" />
+            <row keys="symbol comma extra space period enter" />
+        </layer>
+
+        <layer id="touch-shift">
+            <row keys="ko-Q ko-W ko-E ko-R ko-T ko-y ko-u ko-i ko-O ko-P" />
+            <row keys="ko-a ko-s ko-d ko-f ko-g ko-h ko-j ko-k ko-l" />
+            <row keys="unshift ko-z ko-x ko-c ko-v ko-b ko-n ko-m bksp" />
+            <row keys="symbol comma extra space period enter" />
+        </layer>
+    </layers>
+</keyboard3>

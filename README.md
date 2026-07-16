@@ -26,7 +26,7 @@ Work In Process!
 ## Reference
   * [Unicode LDML Part 7: Keyboards](https://unicode.org/reports/tr35/tr35-keyboards.html)
     * 국제적 표준인 Unicode에서 정의한 LDML 키보드 스펙 시트입니다.
-  * [CLDR](https://cldr.unicode.org/)
+  * [CLDR](https://cldr.unicode.org/) ([Repo](https://github.com/unicode-org/cldr/tree/main/keyboards))
     * Unicode에서 진행하는 상위 프로젝트입니다.
   * 나무위키 [두벌식](https://namu.wiki/w/두벌식/자판%20종류), [세벌식](https://namu.wiki/w/세벌식/자판%20종류), [휴대전화 입력기](https://namu.wiki/w/휴대전화%20입력기) 문서
     * 입력기 목록을 참고할 때 활용했습니다.
