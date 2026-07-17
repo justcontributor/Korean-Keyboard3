@@ -60,9 +60,9 @@
         <key id="symbol-1" layerId="symbol-1" />
         <key id="symbol-2" layerId="symbol-2" />
         
-        <key id="bksp" output=""/>
+        <key id="bksp" output="@k3lp:action/backspace"/>
         <key id="extra" layerId="english-base" />
-        <key id="enter" output=""/>
+        <key id="enter" output="\u{000A}"/>
         <key id="space" output=" " stretch="true" />
         <key id="comma" output="," />
         <key id="period" output="." />

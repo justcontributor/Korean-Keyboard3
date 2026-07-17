@@ -19,7 +19,9 @@
         <display keyId="symbol" display="!#1" />
         <display keyId="bksp" display="⌫" />
         <display keyId="enter" display="⏎" />
-        <display keyId="space" display="스페이스" />
+        <display keyId="space" display="␣" />
+        <display keyId="extra" display="🌐" />
+        <display keyId="punc" display=".,?!" />
     </displays>
 
     <keys>
@@ -39,16 +41,18 @@
 
         <key id="symbol" layerId="symbol-1" />
         <key id="bksp" output="@k3lp:action/backspace" />
-        <key id="enter" output="" />
-        <key id="space" output="\m{break}" stretch="true" />
+        <key id="enter" output="\u{000A}" />
+        <key id="space" output="\m{break}" />
+        <key id="punc" output="." />
+        <key id="extra" output="" />
     </keys>
 
     <layers formId="touch">
         <layer id="base">
-            <row keys="ko-i ko-area ko-eu" />
-            <row keys="ko-g_k ko-n_r ko-d_t" />
-            <row keys="ko-b_p ko-s_h ko-j_ch" />
-            <row keys="symbol ko-ng_m space bksp" />
+            <row keys="ko-i ko-area ko-eu bksp" />
+            <row keys="ko-g_k ko-n_r ko-d_t enter" />
+            <row keys="ko-b_p ko-s_h ko-j_ch punc" />
+            <row keys="symbol ko-ng_m space extra" />
         </layer>
     </layers>
 
@@ -178,6 +182,12 @@
             <transform from="\u{11B5}($[jung])" to="\u{11AF}\u{1111}$1" /> <!-- ㄿ → ㄹㅍ -->
             <transform from="\u{11B6}($[jung])" to="\u{11AF}\u{1112}$1" /> <!-- ㅀ → ㄹㅎ -->
             <transform from="\u{11B9}($[jung])" to="\u{11B8}\u{1109}$1" /> <!-- ㅄ → ㅂㅅ -->
+
+            <!-- 천지인 문장부호 순환 -->
+            <transform from="\u{002E}\u{002E}" to="," />
+            <transform from=",\u{002E}" to="\u{003F}" />
+            <transform from="\u{003F}\u{002E}" to="\u{0021}" />
+            <transform from="\u{0021}\u{002E}" to="\u{002E}" />
 
             <!-- 스페이스 1회로 조합 끊기, 2회로 공백 -->
             <transform from="\m{break}\m{break}" to=" " />

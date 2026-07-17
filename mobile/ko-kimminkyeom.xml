@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
+<keyboard3 locale="ko" conformsTo="48">
+    <info name="Korean KimMinKyeom Keyboard" indicator="KO" />
+    <!-- 한국어 김민겸키보드 -->
+    <displays>
+        <display keyId="base" display="한글" />
+        <display keyId="shift" display="\u{21EA}" />
+        <display keyId="unshift" display="\u{21EA}'" />
+        <display keyId="symbol" display="!#1" />
+        <display keyId="symbol-1" display="1/2" />
+        <display keyId="symbol-2" display="2/2" />
+        <display keyId="bksp" display="⌫" />
+        <display keyId="enter" display="⏎" />
+        <display keyId="extra" display="한/영" />
+    </displays>
+
+    <keys>
+        <key id="ko-g" output="ㄱ" />
+        <key id="ko-n" output="ㄴ" />
+        <key id="ko-d" output="ㄷ" />
+        <key id="ko-r" output="ㄹ" />
+        <key id="ko-m" output="ㅁ" />
+        <key id="ko-b" output="ㅂ" />
+        <key id="ko-s" output="ㅅ" />
+        <key id="ko-ng" output="ㅇ" />
+        <key id="ko-j" output="ㅈ" />
+        <key id="ko-ch" output="ㅊ" />
+        <key id="ko-k" output="ㅋ" />
+        <key id="ko-t" output="ㅌ" />
+        <key id="ko-p" output="ㅍ" />
+        <key id="ko-h" output="ㅎ" />
+
+        <key id="ko-a" output="ㅏ" />
+        <key id="ko-ya" output="ㅑ" />
+        <key id="ko-eo" output="ㅓ" />
+        <key id="ko-yeo" output="ㅕ" />
+        <key id="ko-o" output="ㅗ" />
+        <key id="ko-yo" output="ㅛ" />
+        <key id="ko-u" output="ㅜ" />
+        <key id="ko-yu" output="ㅠ" />
+        <key id="ko-eu" output="ㅡ" />
+        <key id="ko-i" output="ㅣ" />
+        <key id="ko-ae" output="ㅐ" />
+        <key id="ko-e" output="ㅔ" />
+        <key id="ko-yae" output="ㅒ" />
+        <key id="ko-ye" output="ㅖ" />
+        <key id="ko-area" output="ㆍ" />
+
+        <key id="ko-bb" output="ㅃ" />
+        <key id="ko-jj" output="ㅉ" />
+        <key id="ko-dd" output="ㄸ" />
+        <key id="ko-gg" output="ㄲ" />
+        <key id="ko-ss" output="ㅆ" />
+
+        <key id="base" layerId="base" />
+        <key id="shift" layerId="touch-shift" />
+        <key id="unshift" layerId="base" />
+        <key id="symbol" layerId="symbol-1" />
+        <key id="symbol-1" layerId="symbol-1" />
+        <key id="symbol-2" layerId="symbol-2" />
+
+        <key id="bksp" output="@k3lp:action/backspace" />
+        <key id="extra" layerId="english-base" />
+        <key id="enter" output="\u{000A}" />
+        <key id="space" output=" " />
+        <key id="comma" output="," />
+        <key id="period" output="." />
+
+        <key id="1" output="1" />
+        <key id="2" output="2" />
+        <key id="3" output="3" />
+        <key id="4" output="4" />
+        <key id="5" output="5" />
+        <key id="6" output="6" />
+        <key id="7" output="7" />
+        <key id="8" output="8" />
+        <key id="9" output="9" />
+        <key id="0" output="0" />
+
+        <key id="bang" output="!" />
+        <key id="at" output="@" />
+        <key id="hash" output="#" />
+        <key id="dollar" output="$" />
+        <key id="percent" output="%" />
+        <key id="caret" output="^" />
+        <key id="amp" output="&amp;" />
+        <key id="asterisk" output="*" />
+        <key id="open-paren" output="(" />
+        <key id="close-paren" output=")" />
+        <key id="lt" output="&lt;" />
+        <key id="gt" output="&gt;" />
+    </keys>
+
+    <layers formId="touch">
+        <layer id="base">
+            <row keys="gap ko-g ko-n ko-d bksp" />
+            <row keys="symbol ko-r ko-m ko-b extra" />
+            <row keys="space ko-s ko-ng ko-j gap" />
+            <row keys="gap ko-eu ko-area ko-i enter" />
+        </layer>
+    </layers>
+    <transforms type="simple">
+        <!-- TODO: 조합 시스템 보충 -->
+        <!-- TODO: 모음 / ㅎ 관련 구현 -->
+        <transformGroup>
+            <transform from="비ㅣ" to="ㅃ" />
+            <transform from="지ㅣ" to="ㅉ" />
+            <transform from="디ㅣ" to="ㄸ" />
+            <transform from="기ㅣ" to="ㄲ" />
+            <transform from="시ㅣ" to="ㅆ" />
+        </transformGroup>
+        <transformGroup>
+            <transform from="브ㅡ" to="ㅍ" />
+            <transform from="즈ㅡ" to="ㅊ" />
+            <transform from="드ㅡ" to="ㅌ" />
+            <transform from="그ㅡ" to="ㅋ" />
+            <transform from="으ㅡ" to="ㅎ" />
+        </transformGroup>
+        <transformGroup>
+            <transform from="ㅂㅂㅂ" to="ㅍ" />
+            <transform from="ㅈㅈㅈ" to="ㅊ" />
+            <transform from="ㄷㄷㄷ" to="ㅌ" />
+            <transform from="ㄱㄱㄱ" to="ㅋ" />
+            <transform from="ㅆㅅㅅ" to="ㅅ" />
+            <transform from="ㅅㅆㅅ" to="ㅅ" />
+        </transformGroup>
+        <transformGroup>
+            <transform from="ㅍㅂ" to="ㅃ" />
+            <transform from="ㅊㅈ" to="ㅉ" />
+            <transform from="ㅌㄷ" to="ㄸ" />
+            <transform from="ㅋㄱ" to="ㄲ" />
+        </transformGroup>
+        <transformGroup>
+            <transform from="ㆍ" to="ㅏ" />
+            <transform from="ㅏㆍ" to="ㅑ" />
+            <transform from="ㅏㅣ" to="ㅓ" />
+            <transform from="ㅑㅣ" to="ㅕ" />
+            <transform from="ㆍㅡ" to="ㅗ" />
+            <transform from="ㅑㅡ" to="ㅛ" />
+            <transform from="ㅡㆍ" to="ㅜ" />
+            <transform from="ㅜㆍ" to="ㅠ" />
+            <transform from="ㅗㆍ" to="ㅘ" />
+            <transform from="ㅘㅣ" to="ㅙ" />
+        </transformGroup>
+    </transforms>
+</keyboard3>

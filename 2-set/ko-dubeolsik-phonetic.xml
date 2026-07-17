@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
 <keyboard3 locale="ko" conformsTo="48">
-    <info name="Korean Dubeolsik Phonetic" indicator="KO"/>
+    <info name="Korean Dubeolsik Phonetic" indicator="KO" />
     <!-- 한국어 두벌식 포네틱 (Phonetic; 음성학) -->
     <displays>
         <display keyId="base" display="한글" />
@@ -16,42 +16,42 @@
     </displays>
 
     <keys>
-        <key id="ko-q" output="ㅇ"/>
-        <key id="ko-w" output="ㅡ"/>
-        <key id="ko-e" output="ㅔ"/>
-        <key id="ko-r" output="ㄹ"/>
-        <key id="ko-t" output="ㅌ"/>
-        <key id="ko-y" output="ㅐ"/>
-        <key id="ko-u" output="ㅜ"/>
-        <key id="ko-i" output="ㅣ"/>
-        <key id="ko-o" output="ㅗ"/>
-        <key id="ko-p" output="ㅍ"/>
-        
-        <key id="ko-a" output="ㅏ"/>
-        <key id="ko-s" output="ㅅ"/>
-        <key id="ko-d" output="ㄷ"/>
-        <key id="ko-f" output="ㅑ"/>
-        <key id="ko-g" output="ㄱ"/>
-        <key id="ko-h" output="ㅎ"/>
-        <key id="ko-j" output="ㅈ"/>
-        <key id="ko-k" output="ㅋ"/>
-        <key id="ko-l" output="ㅛ"/>
-        
-        <key id="ko-z" output="ㅕ"/>
-        <key id="ko-x" output="ㅠ"/>
-        <key id="ko-c" output="ㅊ"/>
-        <key id="ko-v" output="ㅓ"/>
-        <key id="ko-b" output="ㅂ"/>
-        <key id="ko-n" output="ㄴ"/>
-        <key id="ko-m" output="ㅁ"/>
-        
-        <key id="ko-B" output="ㅃ"/>
-        <key id="ko-J" output="ㅉ"/>
-        <key id="ko-D" output="ㄸ"/>
-        <key id="ko-G" output="ㄲ"/>
-        <key id="ko-S" output="ㅆ"/>
-        <key id="ko-Y" output="ㅒ"/>
-        <key id="ko-E" output="ㅖ"/>
+        <key id="ko-q" output="ㅇ" />
+        <key id="ko-w" output="ㅡ" />
+        <key id="ko-e" output="ㅔ" />
+        <key id="ko-r" output="ㄹ" />
+        <key id="ko-t" output="ㅌ" />
+        <key id="ko-y" output="ㅐ" />
+        <key id="ko-u" output="ㅜ" />
+        <key id="ko-i" output="ㅣ" />
+        <key id="ko-o" output="ㅗ" />
+        <key id="ko-p" output="ㅍ" />
+
+        <key id="ko-a" output="ㅏ" />
+        <key id="ko-s" output="ㅅ" />
+        <key id="ko-d" output="ㄷ" />
+        <key id="ko-f" output="ㅑ" />
+        <key id="ko-g" output="ㄱ" />
+        <key id="ko-h" output="ㅎ" />
+        <key id="ko-j" output="ㅈ" />
+        <key id="ko-k" output="ㅋ" />
+        <key id="ko-l" output="ㅛ" />
+
+        <key id="ko-z" output="ㅕ" />
+        <key id="ko-x" output="ㅠ" />
+        <key id="ko-c" output="ㅊ" />
+        <key id="ko-v" output="ㅓ" />
+        <key id="ko-b" output="ㅂ" />
+        <key id="ko-n" output="ㄴ" />
+        <key id="ko-m" output="ㅁ" />
+
+        <key id="ko-B" output="ㅃ" />
+        <key id="ko-J" output="ㅉ" />
+        <key id="ko-D" output="ㄸ" />
+        <key id="ko-G" output="ㄲ" />
+        <key id="ko-S" output="ㅆ" />
+        <key id="ko-Y" output="ㅒ" />
+        <key id="ko-E" output="ㅖ" />
 
         <key id="base" layerId="base" width="1.5" />
         <key id="shift" layerId="touch-shift" width="1.5" />
@@ -59,10 +59,10 @@
         <key id="symbol" layerId="symbol-1" width="1.5" />
         <key id="symbol-1" layerId="symbol-1" width="1.5" />
         <key id="symbol-2" layerId="symbol-2" width="1.5" />
-        
-        <key id="bksp" output="" stretch="true" />
+
+        <key id="bksp" output="@k3lp:action/backspace" stretch="true" />
         <key id="extra" layerId="english-base" />
-        <key id="enter" output="" width="1.6" />
+        <key id="enter" output="\u{000A}" width="1.6" />
         <key id="space" output=" " stretch="true" />
         <key id="comma" output="," />
         <key id="period" output="." />
@@ -107,7 +107,7 @@
             <row keys="ko-z ko-x ko-c ko-v ko-B ko-n ko-m lt gt" />
         </layer>
     </layers>
-    
+
     <layers formId="touch">
         <layer id="base">
             <row keys="ko-q ko-w ko-e ko-r ko-t ko-y ko-u ko-i ko-o ko-p" />
