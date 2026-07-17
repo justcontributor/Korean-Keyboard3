@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
+<keyboard3 locale="ko" conformsTo="48">
+    <info name="Korean DingGul Keyboard" indicator="KO"/>
+    <!-- 한국어 딩굴 키보드 -->
+    <displays>
+        <display keyId="base" display="한글" />
+        <display keyId="shift" display="\u{21EA}" />
+        <display keyId="unshift" display="\u{21EA}'" />
+        <display keyId="symbol" display="!#1" />
+        <display keyId="symbol-1" display="1/2" />
+        <display keyId="symbol-2" display="2/2" />
+        <display keyId="bksp" display="⌫" />
+        <display keyId="enter" display="⏎" />
+        <display keyId="extra" display="한/영" />
+        <display keyId="ko-iarea" display="ㅣㆍ" />
+        <display keyId="ko-euii" display="ㅡㅣㅣ" />
+        <display keyId="ko-area2" display="ㆍㆍ" />
+    </displays>
+
+    <keys>
+        <key id="ko-g" flickId="ko-g-flicks" output="ㄱ"/>
+        <key id="ko-n" flickId="ko-n-flicks" output="ㄴ"/>
+        <key id="ko-d" output="ㄷ"/>
+        <key id="ko-r" flickId="ko-r-flicks" output="ㄹ"/>
+        <key id="ko-m" flickId="ko-m-flicks" output="ㅁ"/>
+        <key id="ko-b" output="ㅂ"/>
+        <key id="ko-s" flickId="ko-s-flicks" output="ㅅ"/>
+        <key id="ko-ng" flickId="ko-ng-flicks" output="ㅇ"/>
+        <key id="ko-j" flickId="ko-j-flicks" output="ㅈ"/>
+        <key id="ko-ch" output="ㅊ"/>
+        <key id="ko-k" output="ㅋ"/>
+        <key id="ko-t" output="ㅌ"/>
+        <key id="ko-p" output="ㅍ"/>
+        <key id="ko-h" flickId="ko-h-flicks" output="ㅎ"/>
+        
+        <key id="ko-bb" output="ㅃ"/>
+        <key id="ko-jj" output="ㅉ"/>
+        <key id="ko-dd" output="ㄸ"/>
+        <key id="ko-gg" output="ㄲ"/>
+        <key id="ko-ss" output="ㅆ"/>
+
+        <key id="ko-a" output="ㅏ"/>
+        <key id="ko-ya" output="ㅑ"/>
+        <key id="ko-eo" output="ㅓ"/>
+        <key id="ko-yeo" output="ㅕ"/>
+        <key id="ko-o" output="ㅗ"/>
+        <key id="ko-yo" output="ㅛ"/>
+        <key id="ko-u" output="ㅜ"/>
+        <key id="ko-yu" output="ㅠ"/>
+        <key id="ko-eu" output="ㅡ"/>
+        <key id="ko-i" output="ㅣ"/>
+        <key id="ko-ae" output="ㅐ"/>
+        <key id="ko-e" output="ㅔ"/>
+        <key id="ko-yae" output="ㅒ"/>
+        <key id="ko-ye" output="ㅖ"/>
+        <key id="ko-area" output="ㆍ"/>
+
+        <key id="ko-oe" output="ㅚ"/>
+        <key id="ko-wa" output="ㅘ"/>
+        <key id="ko-wi" output="ㅟ"/>
+        <key id="ko-wo" output="ㅝ"/>
+        <key id="ko-wae" output="ㅙ"/>
+        <key id="ko-we" output="ㅞ"/>
+
+        <key id="ko-eui" flickId="ko-eui-flicks" output="ㅢ"/>
+        <key id="ko-iarea" flickId="ko-iarea-flicks" output=""/>
+        <key id="ko-euii" flickId="ko-euii-flicks" output=""/>
+        <key id="ko-area2" flickId="ko-area2-flicks" output=""/>
+        
+        <key id="base" layerId="base" />
+        <key id="shift" layerId="touch-shift" />
+        <key id="unshift" layerId="base" />
+        <key id="symbol" layerId="symbol-1" />
+        <key id="symbol-1" layerId="symbol-1" />
+        <key id="symbol-2" layerId="symbol-2" />
+        
+        <key id="bksp" output="" />
+        <key id="extra" layerId="english-base" />
+        <key id="enter" output="" />
+        <key id="space" output=" " />
+        <key id="comma" output="," />
+        <key id="period" flickId="period-flicks" output="." />
+
+        <key id="1" output="1" />
+        <key id="2" output="2" />
+        <key id="3" output="3" />
+        <key id="4" output="4" />
+        <key id="5" output="5" />
+        <key id="6" output="6" />
+        <key id="7" output="7" />
+        <key id="8" output="8" />
+        <key id="9" output="9" />
+        <key id="0" output="0" />
+
+        <key id="bang" output="!" />
+        <key id="at" output="@" />
+        <key id="hash" output="#" />
+        <key id="dollar" output="$" />
+        <key id="percent" output="%" />
+        <key id="caret" output="^" />
+        <key id="amp" output="&amp;" />
+        <key id="asterisk" output="*" />
+        <key id="open-paren" output="(" />
+        <key id="close-paren" output=")" />
+        <key id="lt" output="&lt;" />
+        <key id="gt" output="&gt;" />
+
+        <key id="slash" flickId="slash-flicks" output="/" />
+        <key id="question" flickId="question-flicks" output="?" />
+        <key id="colon" output=":" />
+        <key id="semicolon" output=";" />
+        <key id="equal" output="=" />
+        <key id="minus" output="-" />
+        <key id="underscore" output="_" />
+        <key id="plus" output="+" />
+        <key id="quote" output="'" />
+        <key id="dquote" output='"' />
+        <key id="tilde" output="~" />
+        <key id="heart" output="❤️" />
+    </keys>
+
+    <flicks>
+        <flick id="ko-g-flicks">
+            <flickSegment directions="n" keyId="ko-gg" />
+            <flickSegment directions="e" keyId="ko-k" />
+            <flickSegment directions="s" keyId="hash" />
+            <flickSegment directions="w" keyId="ko-k" />
+        </flick>
+        <flick id="ko-n-flicks">
+            <flickSegment directions="n" keyId="ko-dd" />
+            <flickSegment directions="e" keyId="ko-t" />
+            <flickSegment directions="s" keyId="ko-d" />
+            <flickSegment directions="w" keyId="ko-t" />
+        </flick>
+        <flick id="ko-eui-flicks">
+            <flickSegment directions="n" keyId="ko-oe" />
+            <flickSegment directions="e" keyId="ko-wa" />
+            <flickSegment directions="s" keyId="ko-wi" />
+            <flickSegment directions="w" keyId="ko-wo" />
+        </flick>
+        <flick id="ko-r-flicks">
+            <flickSegment directions="n" keyId="caret" />
+            <flickSegment directions="e" keyId="minus" />
+            <flickSegment directions="s" keyId="underscore" />
+            <flickSegment directions="w" keyId="equal" />
+        </flick>
+        <flick id="ko-m-flicks">
+            <flickSegment directions="n" keyId="ko-bb" />
+            <flickSegment directions="e" keyId="ko-p" />
+            <flickSegment directions="s" keyId="ko-b" />
+            <flickSegment directions="w" keyId="ko-p" />
+        </flick>
+        <flick id="ko-iarea-flicks">
+            <flickSegment directions="n" keyId="ko-o" />
+            <flickSegment directions="e" keyId="ko-a" />
+            <flickSegment directions="s" keyId="ko-u" />
+            <flickSegment directions="w" keyId="ko-eo" />
+        </flick>
+        <flick id="question-flicks">
+            <flickSegment directions="n" keyId="bang" />
+            <flickSegment directions="s" keyId="asterisk" />
+            <flickSegment directions="w" keyId="plus" />
+        </flick>
+        <flick id="ko-s-flicks">
+            <flickSegment directions="n" keyId="ko-ss" />
+            <flickSegment directions="e" keyId="3" />
+            <flickSegment directions="s" keyId="2" />
+            <flickSegment directions="w" keyId="1" />
+        </flick>
+        <flick id="ko-ng-flicks">
+            <flickSegment directions="n" keyId="heart" />
+            <flickSegment directions="e" keyId="6" />
+            <flickSegment directions="s" keyId="5" />
+            <flickSegment directions="w" keyId="4" />
+        </flick>
+        <flick id="ko-euii-flicks">
+            <flickSegment directions="n" keyId="ko-wae" />
+            <flickSegment directions="e" keyId="ko-ae" />
+            <flickSegment directions="s" keyId="ko-we" />
+            <flickSegment directions="w" keyId="ko-e" />
+        </flick>
+        <flick id="period-flicks">
+            <flickSegment directions="n" keyId="dquote" />
+            <flickSegment directions="s" keyId="quote" />
+            <flickSegment directions="w" keyId="comma" />
+        </flick>
+        <flick id="ko-j-flicks">
+            <flickSegment directions="n" keyId="ko-jj" />
+            <flickSegment directions="e" keyId="ko-ch" />
+            <flickSegment directions="s" keyId="tilde" />
+            <flickSegment directions="w" keyId="ko-ch" />
+        </flick>
+        <flick id="ko-h-flicks">
+            <flickSegment directions="n" keyId="0" />
+            <flickSegment directions="e" keyId="9" />
+            <flickSegment directions="s" keyId="8" />
+            <flickSegment directions="w" keyId="7" />
+        </flick>
+        <flick id="ko-area2-flicks">
+            <flickSegment directions="n" keyId="ko-yo" />
+            <flickSegment directions="e" keyId="ko-ya" />
+            <flickSegment directions="s" keyId="ko-yu" />
+            <flickSegment directions="w" keyId="ko-yeo" />
+        </flick>
+        <flick id="slash-flicks">
+            <flickSegment directions="n" keyId="colon" />
+            <flickSegment directions="s" keyId="semicolon" />
+            <flickSegment directions="w" keyId="at" />
+        </flick>
+    </flicks>
+
+    <layers formId="touch">
+        <layer id="base">
+            <row keys="ko-g ko-n ko-eui bksp" />
+            <row keys="ko-r ko-m ko-iarea question" />
+            <row keys="ko-s ko-ng ko-euii period" />
+            <row keys="ko-j ko-h ko-area2 slash" />
+            <row keys="symbol extra space enter" />
+        </layer>
+    </layers>
+</keyboard3>
