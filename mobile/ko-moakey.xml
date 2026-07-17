@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
+<keyboard3 locale="ko" conformsTo="48">
+    <info name="Korean Moakey Keyboard" indicator="KO" />
+    <!-- 한국어 모아키 키보드 -->
+    <!-- TODO: 한글 특성상 Keyboard3로 모든 자모 조합 구현 시 지나치게 방대해져 보류. -->
+    <!--       현재는 자음을 누른 뒤, 모음을 플릭으로 따로 입력하도록 구현되었으나, 더 나은 방법 찾아야 함. -->
+    <displays>
+        <display keyId="base" display="한글" />
+        <display keyId="shift" display="\u{21EA}" />
+        <display keyId="unshift" display="\u{21EA}'" />
+        <display keyId="symbol" display="!#1" />
+        <display keyId="symbol-1" display="1/2" />
+        <display keyId="symbol-2" display="2/2" />
+        <display keyId="bksp" display="⌫" />
+        <display keyId="enter" display="⏎" />
+        <display keyId="extra" display="한/영" />
+        <display keyId="moeum" display="ㅣㆍㅡ\u{000A}모음" />
+    </displays>
+
+    <keys>
+        <key id="ko-g" flickId="moakey-vowels" output="ㄱ" />
+        <key id="ko-n" flickId="moakey-vowels" output="ㄴ" />
+        <key id="ko-d" flickId="moakey-vowels" output="ㄷ" />
+        <key id="ko-r" flickId="moakey-vowels" output="ㄹ" />
+        <key id="ko-m" flickId="moakey-vowels" output="ㅁ" />
+        <key id="ko-b" flickId="moakey-vowels" output="ㅂ" />
+        <key id="ko-s" flickId="moakey-vowels" output="ㅅ" />
+        <key id="ko-ng" flickId="moakey-vowels" output="ㅇ" />
+        <key id="ko-j" flickId="moakey-vowels" output="ㅈ" />
+        <key id="ko-ch" flickId="moakey-vowels" output="ㅊ" />
+        <key id="ko-k" flickId="moakey-vowels" output="ㅋ" />
+        <key id="ko-t" flickId="moakey-vowels" output="ㅌ" />
+        <key id="ko-p" flickId="moakey-vowels" output="ㅍ" />
+        <key id="ko-h" flickId="moakey-vowels" output="ㅎ" />
+
+        <key id="ko-bb" flickId="moakey-vowels" output="ㅃ" />
+        <key id="ko-jj" flickId="moakey-vowels" output="ㅉ" />
+        <key id="ko-dd" flickId="moakey-vowels" output="ㄸ" />
+        <key id="ko-gg" flickId="moakey-vowels" output="ㄲ" />
+        <key id="ko-ss" flickId="moakey-vowels" output="ㅆ" />
+
+        <key id="ko-a" output="ㅏ" />
+        <key id="ko-ya" output="ㅑ" />
+        <key id="ko-eo" output="ㅓ" />
+        <key id="ko-yeo" output="ㅕ" />
+        <key id="ko-o" output="ㅗ" />
+        <key id="ko-yo" output="ㅛ" />
+        <key id="ko-u" output="ㅜ" />
+        <key id="ko-yu" output="ㅠ" />
+        <key id="ko-eu" output="ㅡ" />
+        <key id="ko-i" output="ㅣ" />
+        <key id="ko-ae" output="ㅐ" />
+        <key id="ko-e" output="ㅔ" />
+        <key id="ko-yae" output="ㅒ" />
+        <key id="ko-ye" output="ㅖ" />
+        <key id="ko-area" output="ㆍ" />
+
+        <key id="ko-oe" output="ㅚ" />
+        <key id="ko-wa" output="ㅘ" />
+        <key id="ko-wi" output="ㅟ" />
+        <key id="ko-wo" output="ㅝ" />
+        <key id="ko-wae" output="ㅙ" />
+        <key id="ko-we" output="ㅞ" />
+        <key id="ko-eui" output="ㅢ" />
+
+        <key id="moeum" output="" />
+
+        <key id="base" layerId="base" />
+        <key id="shift" layerId="touch-shift" />
+        <key id="unshift" layerId="base" />
+        <key id="symbol" layerId="symbol-1" />
+        <key id="symbol-1" layerId="symbol-1" />
+        <key id="symbol-2" layerId="symbol-2" />
+
+        <key id="bksp" output="" />
+        <key id="extra" layerId="english-base" />
+        <key id="enter" output="" />
+        <key id="space" output=" " />
+        <key id="comma" output="," />
+        <key id="period" output="." />
+
+        <key id="1" output="1" />
+        <key id="2" output="2" />
+        <key id="3" output="3" />
+        <key id="4" output="4" />
+        <key id="5" output="5" />
+        <key id="6" output="6" />
+        <key id="7" output="7" />
+        <key id="8" output="8" />
+        <key id="9" output="9" />
+        <key id="0" output="0" />
+
+        <key id="bang" output="!" />
+        <key id="at" output="@" />
+        <key id="hash" output="#" />
+        <key id="dollar" output="$" />
+        <key id="percent" output="%" />
+        <key id="caret" output="^" />
+        <key id="amp" output="&amp;" />
+        <key id="asterisk" output="*" />
+        <key id="open-paren" output="(" />
+        <key id="close-paren" output=")" />
+        <key id="lt" output="&lt;" />
+        <key id="gt" output="&gt;" />
+
+        <key id="slash" output="/" />
+        <key id="question" output="?" />
+        <key id="colon" output=":" />
+        <key id="semicolon" output=";" />
+        <key id="equal" output="=" />
+        <key id="minus" output="-" />
+        <key id="underscore" output="_" />
+        <key id="plus" output="+" />
+        <key id="quote" output="'" />
+        <key id="dquote" output='"' />
+        <key id="tilde" output="~" />
+        <key id="heart" output="❤️" />
+    </keys>
+
+    <flicks>
+        <flick id="moakey-vowels">
+            <flickSegment directions="n" keyId="ko-o" />
+            <flickSegment directions="e" keyId="ko-a" />
+            <flickSegment directions="s" keyId="ko-u" />
+            <flickSegment directions="w" keyId="ko-eo" />
+
+            <flickSegment directions="nw" keyId="ko-i" />
+            <flickSegment directions="ne" keyId="ko-i" />
+            <flickSegment directions="sw" keyId="ko-eu" />
+            <flickSegment directions="se" keyId="ko-eu" />
+
+            <flickSegment directions="n e" keyId="ko-wa" />
+            <flickSegment directions="s w" keyId="ko-wo" />
+
+            <flickSegment directions="n s" keyId="ko-oe" />
+            <flickSegment directions="s n" keyId="ko-wi" />
+            <flickSegment directions="e w" keyId="ko-ae" />
+            <flickSegment directions="w e" keyId="ko-e" />
+            <flickSegment directions="sw ne" keyId="ko-eui" />
+            <flickSegment directions="se nw" keyId="ko-eui" />
+
+            <flickSegment directions="n s n" keyId="ko-yo" />
+            <flickSegment directions="s n s" keyId="ko-yu" />
+            <flickSegment directions="e w e" keyId="ko-ya" />
+            <flickSegment directions="w e w" keyId="ko-yeo" />
+
+            <flickSegment directions="n e sw" keyId="ko-wae" />
+            <flickSegment directions="n e w" keyId="ko-wae" />
+            <flickSegment directions="s w ne" keyId="ko-we" />
+            <flickSegment directions="s w e" keyId="ko-we" />
+
+            <flickSegment directions="e w e w" keyId="ko-yae" />
+            <flickSegment directions="w e w e" keyId="ko-ye" />
+        </flick>
+    </flicks>
+
+    <layers formId="touch">
+        <layer id="base">
+            <row keys="tilde ko-bb ko-jj ko-dd ko-gg ko-ss bang" />
+            <row keys="caret ko-b ko-j ko-d ko-g ko-s question" />
+            <row keys="semicolon ko-m ko-n ko-ng ko-r ko-h period" />
+            <row keys="asterisk ko-k ko-t ko-ch ko-p bksp" />
+            <row keys="symbol extra space moeum enter" />
+        </layer>
+    </layers>
+
+</keyboard3>
