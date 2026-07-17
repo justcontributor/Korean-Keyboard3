@@ -9,9 +9,31 @@
 본 프로젝트에서는 해당 사양을 바탕으로 모든 한국어 자판 레이아웃을 구현하여, 컴퓨터 체계와 상관없이 일관된 한국어 입력 환경을 공개적으로 제공하고자 합니다.
 
 ## List
-```
-Work In Process!
-```
+| / | 설명 |
+| --- | --- |
+ko-variables | 한글 IME 환경 모사를 위한 음절 변수 목록
+ko-transforms | 한글 IME 환경 모사를 위한 변환 규칙 목록
+ko-transforms-bksp | 한글 IME 환경 모사를 위한 백스페이스 변환 규칙 목록
+
+| 두벌식 | 서브타입 |
+| --- | --- |
+ko-dubeolsik-standard | 표준
+ko-dubeolsik-phonetic | 음성(포네틱)
+ko-dubeolsik-old | 옛한글
+ko-kp-dubeolsik-standard | 북한 표준
+
+| 세벌식 | 서브타입 |
+| --- | --- |
+... | 
+
+| 모바일 | 서브타입 |
+| --- | --- |
+ko-danmoeum | 단모음
+ko-dinggul | 딩굴
+ko-moakey | 모아키
+
+## Roadmap
+상세한 프로젝트 향후 방향과 명명 관례는 [ROADMAP.md](https://github.com/justcontributor/Korean-Keyboard3/ROADMAP.md)를 확인하시기 바랍니다.
 
 ## Contributing
 자유로운 기여를 환영합니다!
