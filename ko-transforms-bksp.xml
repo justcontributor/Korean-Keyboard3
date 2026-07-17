@@ -1,0 +1,59 @@
+<transforms type="backspace">
+    <transformGroup>
+        <!-- single_final_backspace -->
+        <transform from="($[cjs_idx_01])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_02])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_04])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_07])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_08])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_16])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_17])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_19])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_20])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_21])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_22])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_23])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_24])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_25])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_26])" to="$[1:cj_base]" />
+        <transform from="($[cjs_idx_27])" to="$[1:cj_base]" />
+
+        <!-- double_final_backspace -->
+        <transform from="($[cjs_idx_03])" to="$[1:cjs_idx_01]" />
+        <transform from="($[cjs_idx_05])" to="$[1:cjs_idx_04]" />
+        <transform from="($[cjs_idx_06])" to="$[1:cjs_idx_04]" />
+        <transform from="($[cjs_idx_09])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_10])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_11])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_12])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_13])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_14])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_15])" to="$[1:cjs_idx_08]" />
+        <transform from="($[cjs_idx_18])" to="$[1:cjs_idx_17]" />
+
+        <!-- single_vowel_backspace -->
+        <transform from="($[syl_idx_00])" to="$[1:cho]" />
+        <transform from="($[syl_idx_01])" to="$[1:cho]" />
+        <transform from="($[syl_idx_02])" to="$[1:cho]" />
+        <transform from="($[syl_idx_03])" to="$[1:cho]" />
+        <transform from="($[syl_idx_04])" to="$[1:cho]" />
+        <transform from="($[syl_idx_05])" to="$[1:cho]" />
+        <transform from="($[syl_idx_06])" to="$[1:cho]" />
+        <transform from="($[syl_idx_07])" to="$[1:cho]" />
+        <transform from="($[syl_idx_08])" to="$[1:cho]" />
+        <transform from="($[syl_idx_12])" to="$[1:cho]" />
+        <transform from="($[syl_idx_13])" to="$[1:cho]" />
+        <transform from="($[syl_idx_17])" to="$[1:cho]" />
+        <transform from="($[syl_idx_18])" to="$[1:cho]" />
+        <transform from="($[syl_idx_20])" to="$[1:cho]" />
+
+        <!-- double_vowel_backspace -->
+        <transform from="($[syl_idx_09])" to="$[1:syl_idx_08]" />
+        <transform from="($[syl_idx_10])" to="$[1:syl_idx_08]" />
+        <transform from="($[syl_idx_11])" to="$[1:syl_idx_08]" />
+        <transform from="($[syl_idx_14])" to="$[1:syl_idx_13]" />
+        <transform from="($[syl_idx_15])" to="$[1:syl_idx_13]" />
+        <transform from="($[syl_idx_16])" to="$[1:syl_idx_13]" />
+        <transform from="($[syl_idx_19])" to="$[1:syl_idx_18]" />
+    </transformGroup>
+</transforms>
