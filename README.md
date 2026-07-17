@@ -31,6 +31,7 @@ ko-kp-dubeolsik-standard | 북한 표준
 ko-danmoeum | 단모음
 ko-dinggul | 딩굴
 ko-moakey | 모아키
+ko-chunjiin | 천지인
 
 ## Roadmap
 상세한 프로젝트 향후 방향과 명명 관례는 [ROADMAP.md](https://github.com/justcontributor/Korean-Keyboard3/ROADMAP.md)를 확인하시기 바랍니다.
