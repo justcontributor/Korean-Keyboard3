@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
+<keyboard3 locale="ko" conformsTo="48">
+    <info name="Korean Naratgeul Keyboard" indicator="KO" />
+    <!-- 한국어 나랏글 키보드 (조합형 낱자 기반) -->
+    <displays>
+        <display keyId="base" display="한글" />
+        <display keyId="shift" display="\u{21EA}" />
+        <display keyId="unshift" display="\u{21EA}'" />
+        <display keyId="symbol" display="!#1" />
+        <display keyId="symbol-1" display="1/2" />
+        <display keyId="symbol-2" display="2/2" />
+        <display keyId="bksp" display="⌫" />
+        <display keyId="enter" display="⏎" />
+        <display keyId="extra" display="🌐" />
+        <display keyId="space" display="␣" />
+        <display keyId="ko-aspirate" display="획추가" />
+        <display keyId="ko-double" display="쌍자음" />
+        <display keyId="ko-a_eo" display="ㅏㅓ" />
+        <display keyId="ko-o_u" display="ㅗㅜ" />
+    </displays>
+
+    <keys>
+        <key id="ko-i" output="\u{1175}" />
+        <key id="ko-eu" output="\u{1173}" />
+        <key id="ko-a_eo" output="\u{1161}" />
+        <key id="ko-o_u" output="\u{1169}" />
+
+        <key id="ko-g" output="\u{1100}" />
+        <key id="ko-n" output="\u{1102}" />
+        <key id="ko-r" output="\u{1105}" />
+        <key id="ko-m" output="\u{1106}" />
+        <key id="ko-s" output="\u{1109}" />
+        <key id="ko-ng" output="\u{110B}" />
+
+        <key id="ko-aspirate" output="\m{aspirate}" />
+        <key id="ko-double" output="\m{double}" />
+        
+        <key id="base" layerId="base" />
+        <key id="shift" layerId="touch-shift" />
+        <key id="unshift" layerId="base" />
+        <key id="symbol" layerId="symbol-1" />
+        <key id="symbol-1" layerId="symbol-1" />
+        <key id="symbol-2" layerId="symbol-2" />
+        <key id="bksp" output="@k3lp:action/backspace" width="2" />
+        <key id="extra" layerId="english-base" />
+        <key id="enter" output="\u{000A}" />
+        <key id="space" output="\m{break}" width="2" />
+        
+        <!-- Symbols -->
+        <key id="comma" output="," />
+        <key id="period" output="." />
+    </keys>
+
+    <layers formId="touch">
+        <layer id="base">
+            <row keys="ko-g ko-n ko-a_eo bksp" />
+            <row keys="ko-r ko-m ko-o_u space" />
+            <row keys="ko-s ko-ng ko-i comma enter" />
+            <row keys="ko-aspirate ko-eu ko-double symbol extra" />
+        </layer>
+    </layers>
+
+    <variables>
+        <!-- 16개의 유효한 종성 대응 초성 목록 -->
+        <set id="cho" value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1104} \u{1105} \u{1106} \u{1107} \u{1108} \u{1109} \u{110A} \u{110B} \u{110C} \u{110D} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+        <set id="jung" value="\u{1161} \u{1162} \u{1163} \u{1164} \u{1165} \u{1166} \u{1167} \u{1168} \u{1169} \u{116A} \u{116B} \u{116C} \u{116D} \u{116E} \u{116F} \u{1170} \u{1171} \u{1172} \u{1173} \u{1174} \u{1175} \u{119E}" />
+        <set id="cho_for_jong" value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1105} \u{1106} \u{1107} \u{1109} \u{110A} \u{110B} \u{110C} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+        <set id="jong_mapped" value="\u{11A8} \u{11A9} \u{11AB} \u{11AE} \u{11AF} \u{11B7} \u{11B8} \u{11BA} \u{11BB} \u{11BC} \u{11BD} \u{11BE} \u{11BF} \u{11C0} \u{11C1} \u{11C2}" />
+        <set id="jong_single" value="\u{11A8} \u{11A9} \u{11AB} \u{11AE} \u{11AF} \u{11B7} \u{11B8} \u{11BA} \u{11BB} \u{11BC} \u{11BD} \u{11BE} \u{11BF} \u{11C0} \u{11C1} \u{11C2}" />
+        <set id="cho_mapped" value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1105} \u{1106} \u{1107} \u{1109} \u{110A} \u{110B} \u{110C} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+    </variables>
+
+    <transforms type="simple">
+        <transformGroup>
+            <!-- 모음 순환-->
+            <transform from="\u{1161}\u{1161}" to="\u{1165}" /> <!-- ㅏㅏ → ㅓ -->
+            <transform from="\u{1165}\u{1161}" to="\u{1161}" /> <!-- ㅓㅏ → ㅏ -->
+            <transform from="\u{1169}\u{1169}" to="\u{116E}" /> <!-- ㅗㅗ → ㅜ -->
+            <transform from="\u{116E}\u{1169}" to="\u{1169}" /> <!-- ㅜㅗ → ㅗ -->
+
+            <transform from="\u{1161}\m{aspirate}" to="\u{1163}" /> <!-- ㅏ + 획추가 → ㅑ -->
+            <transform from="\u{1165}\m{aspirate}" to="\u{1167}" /> <!-- ㅓ + 획추가 → ㅕ -->
+            <transform from="\u{1169}\m{aspirate}" to="\u{116D}" /> <!-- ㅗ + 획추가 → ㅛ -->
+            <transform from="\u{116E}\m{aspirate}" to="\u{1172}" /> <!-- ㅜ + 획추가 → ㅠ -->
+
+            <transform from="\u{1161}\u{1175}" to="\u{1162}" /> <!-- ㅏㅣ → ㅐ -->
+            <transform from="\u{1163}\u{1175}" to="\u{1164}" /> <!-- ㅑㅣ → ㅒ -->
+            <transform from="\u{1165}\u{1175}" to="\u{1166}" /> <!-- ㅓㅣ → ㅔ -->
+            <transform from="\u{1167}\u{1175}" to="\u{1168}" /> <!-- ㅕㅣ → ㅖ -->
+            <transform from="\u{1169}\u{1161}" to="\u{116A}" /> <!-- ㅗㅏ → ㅘ -->
+            <transform from="\u{116E}\u{1161}" to="\u{116F}" /> <!-- ㅜㅏ(ㅜ+ㅏㅓ버튼) → ㅝ -->
+            <transform from="\u{1169}\u{1175}" to="\u{116C}" /> <!-- ㅗㅣ → ㅚ -->
+            <transform from="\u{116E}\u{1175}" to="\u{1171}" /> <!-- ㅜㅣ → ㅟ -->
+            <transform from="\u{116A}\u{1175}" to="\u{116B}" /> <!-- ㅘㅣ → ㅙ -->
+            <transform from="\u{116F}\u{1175}" to="\u{1170}" /> <!-- ㅝㅣ → ㅞ -->
+            <transform from="\u{1173}\u{1175}" to="\u{1174}" /> <!-- ㅡㅣ → ㅢ -->
+
+            <!-- 초성 획추가 -->
+            <transform from="\u{1100}\m{aspirate}" to="\u{110F}" /> <!-- ㄱ + 획추가 → ㅋ -->
+            <transform from="\u{1102}\m{aspirate}" to="\u{1103}" /> <!-- ㄴ + 획추가 → ㄷ -->
+            <transform from="\u{1103}\m{aspirate}" to="\u{1110}" /> <!-- ㄷ + 획추가 → ㅌ -->
+            <transform from="\u{1106}\m{aspirate}" to="\u{1107}" /> <!-- ㅁ + 획추가 → ㅂ -->
+            <transform from="\u{1107}\m{aspirate}" to="\u{1111}" /> <!-- ㅂ + 획추가 → ㅍ -->
+            <transform from="\u{1109}\m{aspirate}" to="\u{110C}" /> <!-- ㅅ + 획추가 → ㅈ -->
+            <transform from="\u{110C}\m{aspirate}" to="\u{110E}" /> <!-- ㅈ + 획추가 → ㅊ -->
+            <transform from="\u{110B}\m{aspirate}" to="\u{1112}" /> <!-- ㅇ + 획추가 → ㅎ -->
+
+            <!-- 초성 쌍자음 -->
+            <transform from="\u{1100}\m{double}" to="\u{1101}" /> <!-- ㄱ + 쌍자음 → ㄲ -->
+            <transform from="\u{1103}\m{double}" to="\u{1104}" /> <!-- ㄷ + 쌍자음 → ㄸ -->
+            <transform from="\u{1107}\m{double}" to="\u{1108}" /> <!-- ㅂ + 쌍자음 → ㅃ -->
+            <transform from="\u{1109}\m{double}" to="\u{110A}" /> <!-- ㅅ + 쌍자음 → ㅆ -->
+            <transform from="\u{110C}\m{double}" to="\u{110D}" /> <!-- ㅈ + 쌍자음 → ㅉ -->
+
+            <transform from="($[cho])($[jung])($[cho_for_jong])" to="$1$2$[3:jong_mapped]" />
+
+            <!-- 종성 획추가 -->
+            <transform from="\u{11A8}\m{aspirate}" to="\u{11BF}" /> <!-- ᆨ + 획추가 → ᆿ -->
+            <transform from="\u{11AB}\m{aspirate}" to="\u{11AE}" /> <!-- ᆫ + 획추가 → ᆮ -->
+            <transform from="\u{11AE}\m{aspirate}" to="\u{11C0}" /> <!-- ᆮ + 획추가 → ᇀ -->
+            <transform from="\u{11B7}\m{aspirate}" to="\u{11B8}" /> <!-- ᆷ + 획추가 → ᆸ -->
+            <transform from="\u{11B8}\m{aspirate}" to="\u{11C1}" /> <!-- ᆸ + 획추가 → ᇁ -->
+            <transform from="\u{11BA}\m{aspirate}" to="\u{11BD}" /> <!-- ᆺ + 획추가 → ᆽ -->
+            <transform from="\u{11BD}\m{aspirate}" to="\u{11BE}" /> <!-- ᆽ + 획추가 → ᆾ -->
+            <transform from="\u{11BC}\m{aspirate}" to="\u{11C2}" /> <!-- ᆼ + 획추가 → ᇂ -->
+
+            <!-- 종성 쌍자음 -->
+            <transform from="\u{11A8}\m{double}" to="\u{11A9}" /> <!-- ᆨ + 쌍자음 → ㄲ -->
+            <transform from="\u{11AE}\m{double}" to="\u{1104}" /> <!-- ᆮ + 쌍자음 → ㄸ(초성) -->
+            <transform from="\u{11B8}\m{double}" to="\u{1108}" /> <!-- ᆸ + 쌍자음 → ㅃ(초성) -->
+            <transform from="\u{11BA}\m{double}" to="\u{11BB}" /> <!-- ᆺ + 쌍자음 → ㅆ -->
+            <transform from="\u{11BD}\m{double}" to="\u{110D}" /> <!-- ᆽ + 쌍자음 → ㅉ(초성) -->
+
+            <!-- 이중 종성 결합 -->
+            <transform from="\u{11A8}\u{1109}" to="\u{11AA}" /> <!-- ᆨㅅ → ᆪ -->
+            <transform from="\u{11AB}\u{110C}" to="\u{11AC}" /> <!-- ᆫㅈ → ᆬ -->
+            <transform from="\u{11AB}\u{1112}" to="\u{11AD}" /> <!-- ᆫㅎ → ᆭ -->
+            <transform from="\u{11AF}\u{1100}" to="\u{11B0}" /> <!-- ᆯㄱ → ᆰ -->
+            <transform from="\u{11AF}\u{1106}" to="\u{11B1}" /> <!-- ᆯㅁ → ᆱ -->
+            <transform from="\u{11AF}\u{1107}" to="\u{11B2}" /> <!-- ᆯㅂ → ᆲ -->
+            <transform from="\u{11AF}\u{1109}" to="\u{11B3}" /> <!-- ᆯㅅ → ᆳ -->
+            <transform from="\u{11AF}\u{1110}" to="\u{11B4}" /> <!-- ᆯㅌ → ᆴ -->
+            <transform from="\u{11AF}\u{1111}" to="\u{11B5}" /> <!-- ᆯㅍ → ᆵ -->
+            <transform from="\u{11AF}\u{1112}" to="\u{11B6}" /> <!-- ᆯㅎ → ᆶ -->
+            <transform from="\u{11B8}\u{1109}" to="\u{11B9}" /> <!-- ᆸㅅ → ᆹ -->
+
+            <!-- 이중 종성 변환 -->
+            <transform from="\u{11AA}\m{aspirate}" to="\u{11A8}\u{110C}" /> <!-- ᆪ(ᆨㅅ) + 획추가 → ᆨㅈ(초성) -->
+            <transform from="\u{11AA}\m{double}" to="\u{11A8}\u{110A}" />   <!-- ᆪ(ᆨㅅ) + 쌍자음 → ᆨㅆ(초성) -->
+
+            <transform from="\u{11AC}\m{aspirate}" to="\u{11AB}\u{110E}" /> <!-- ᆬ(ᆫㅈ) + 획추가 → ᆫㅊ(초성) -->
+            <transform from="\u{11AC}\m{double}" to="\u{11AB}\u{110D}" />   <!-- ᆬ(ᆫㅈ) + 쌍자음 → ᆫㅉ(초성) -->
+
+            <transform from="\u{11B0}\m{aspirate}" to="\u{11AF}\u{110F}" /> <!-- ᆰ(ᆯㄱ) + 획추가 → ᆯㅋ(초성) -->
+            <transform from="\u{11B0}\m{double}" to="\u{11AF}\u{1101}" />   <!-- ᆰ(ᆯㄱ) + 쌍자음 → ᆯㄲ(초성) -->
+
+            <transform from="\u{11B1}\m{aspirate}" to="\u{11AF}\u{1107}" /> <!-- ᆱ(ᆯㅁ) + 획추가 → ᆯㅂ(초성) -->
+
+            <transform from="\u{11B2}\m{aspirate}" to="\u{11AF}\u{1111}" /> <!-- ᆲ(ᆯㅂ) + 획추가 → ᆯㅍ(초성) -->
+            <transform from="\u{11B2}\m{double}" to="\u{11AF}\u{1108}" />   <!-- ᆲ(ᆯㅂ) + 쌍자음 → ᆯㅃ(초성) -->
+
+            <transform from="\u{11B3}\m{aspirate}" to="\u{11AF}\u{110C}" /> <!-- ᆳ(ᆯㅅ) + 획추가 → ᆯㅈ(초성) -->
+            <transform from="\u{11B3}\m{double}" to="\u{11AF}\u{110A}" />   <!-- ᆳ(ᆯㅅ) + 쌍자음 → ᆯㅆ(초성) -->
+
+            <transform from="\u{11B9}\m{aspirate}" to="\u{11B8}\u{110C}" /> <!-- ᆹ(ᆸㅅ) + 획추가 → ᆸㅈ(초성) -->
+            <transform from="\u{11B9}\m{double}" to="\u{11B8}\u{110A}" />   <!-- ᆹ(ᆸㅅ) + 쌍자음 → ᆸㅆ(초성) -->
+
+            <!-- 연음 -->
+            <transform from="($[jong_single])($[jung])" to="$[1:cho_mapped]$2" />
+            <transform from="\u{11AA}($[jung])" to="\u{11A8}\u{1109}$1" /> <!-- ㄳ → ㄱㅅ -->
+            <transform from="\u{11AC}($[jung])" to="\u{11AB}\u{110C}$1" /> <!-- ㄵ → ㄴㅈ -->
+            <transform from="\u{11AD}($[jung])" to="\u{11AB}\u{1112}$1" /> <!-- ㄶ → ㄴㅎ -->
+            <transform from="\u{11B0}($[jung])" to="\u{11AF}\u{1100}$1" /> <!-- ㄺ → ㄹㄱ -->
+            <transform from="\u{11B1}($[jung])" to="\u{11AF}\u{1106}$1" /> <!-- ㄻ → ㄹㅁ -->
+            <transform from="\u{11B2}($[jung])" to="\u{11AF}\u{1107}$1" /> <!-- ㄼ → ㄹㅂ -->
+            <transform from="\u{11B3}($[jung])" to="\u{11AF}\u{1109}$1" /> <!-- ㄽ → ㄹㅅ -->
+            <transform from="\u{11B4}($[jung])" to="\u{11AF}\u{1110}$1" /> <!-- ㄾ → ㄹㅌ -->
+            <transform from="\u{11B5}($[jung])" to="\u{11AF}\u{1111}$1" /> <!-- ㄿ → ㄹㅍ -->
+            <transform from="\u{11B6}($[jung])" to="\u{11AF}\u{1112}$1" /> <!-- ㅀ → ㄹㅎ -->
+            <transform from="\u{11B9}($[jung])" to="\u{11B8}\u{1109}$1" /> <!-- ㅄ → ㅂㅅ -->
+        </transformGroup>
+
+        <transformGroup>
+            <!-- 처리 완료 후 마커 및 스페이스 정리 -->
+            <transform from="\m{aspirate}" to="" />
+            <transform from="\m{double}" to="" />
+            
+            <transform from="\m{break}\m{break}" to=" " />
+            <transform from=" \m{break}" to="  " />
+        </transformGroup>
+    </transforms>
+</keyboard3>

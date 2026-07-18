@@ -28,6 +28,7 @@ ko-kp-dubeolsik-standard | 북한 표준
 
 | 모바일 | 서브타입 |
 | --- | --- |
+ko-naratgeul | 나랏글
 ko-danmoeum | 단모음
 ko-dinggul | 딩굴
 ko-moakey | 모아키
