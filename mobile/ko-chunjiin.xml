@@ -25,12 +25,10 @@
     </displays>
 
     <keys>
-        <!-- Jungseong -->
         <key id="ko-i" output="\u{1175}" />
         <key id="ko-area" output="\u{119E}" />
         <key id="ko-eu" output="\u{1173}" />
 
-        <!-- Choseong -->
         <key id="ko-g_k" output="\u{1100}" />
         <key id="ko-n_r" output="\u{1102}" />
         <key id="ko-d_t" output="\u{1103}" />
@@ -95,6 +93,9 @@
             <transform from="\u{116F}\u{1175}" to="\u{1170}" /> <!-- ㅝㅣ → ㅞ -->
             <transform from="\u{1173}\u{1175}" to="\u{1174}" /> <!-- ㅡㅣ → ㅢ -->
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 초성 순환 -->
             <transform from="\u{1100}\u{1100}" to="\u{110F}" /> <!-- ㄱㄱ → ㅋ -->
             <transform from="\u{110F}\u{1100}" to="\u{1101}" /> <!-- ㅋㄱ → ㄲ -->
@@ -116,11 +117,17 @@
             <transform from="\u{110B}\u{110B}" to="\u{1106}" /> <!-- ㅇㅇ → ㅁ -->
             <transform from="\u{1106}\u{110B}" to="\u{110B}" /> <!-- ㅁㅇ → ㅇ -->
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 종성 자리 자음(초성)을 종성으로 이동 -->
             <transform from="($[cho])($[jung])($[cho_for_jong])" to="$1$2$[3:jong_mapped]" />
             <!-- 종성 순환에서 초성으로 온 쌍자음 뒤에 중성이 붙으면 순환 중단 -->
             <transform from="\m{doubled}($[jung])" to="$1" />
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 종성 순환 -->
             <transform from="\u{11A8}\u{1100}" to="\u{11BF}" /> <!-- ᆨㄱ → ᆿ -->
             <transform from="\u{11BF}\u{1100}" to="\u{11A9}" /> <!-- ᆿㄱ → ᆩ -->
@@ -143,6 +150,9 @@
             <transform from="\u{1108}\m{doubled}\u{1107}" to="\u{11B8}" /> <!-- ㅃㅂ → ㅂ (종성 전환) -->
             <transform from="\u{110D}\m{doubled}\u{110C}" to="\u{11BD}" /> <!-- ㅉㅈ → ㅈ (종성 전환) -->
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 이중 종성 생성 -->
             <transform from="\u{11A8}\u{1109}" to="\u{11AA}" /> <!-- ᆨㅅ → ᆪ -->
             <transform from="\u{11AB}\u{110C}" to="\u{11AC}" /> <!-- ᆫㅈ → ᆬ -->
@@ -156,6 +166,9 @@
             <transform from="\u{11AF}\u{1112}" to="\u{11B6}" /> <!-- ᆯㅎ → ᆶ -->
             <transform from="\u{11B8}\u{1109}" to="\u{11B9}" /> <!-- ᆸㅅ → ᆹ -->
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 이중 종성 해제 -->
             <transform from="\u{11AA}\u{1109}" to="\u{11A8}\u{1112}" /> <!-- ᆪㅅ → ᆨㅎ -->
             <transform from="\u{11AC}\u{110C}" to="\u{11AB}\u{110E}" /> <!-- ᆬㅈ → ᆫㅊ -->
@@ -169,6 +182,9 @@
             <transform from="\u{11B6}\u{1109}" to="\u{11AF}\u{110A}" /> <!-- ᆶㅅ → ᆯㅆ -->
             <transform from="\u{11B9}\u{1109}" to="\u{11B8}\u{1112}" /> <!-- ᆹㅅ → ᆸㅎ -->
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 종성 뒤 중성 시 초성 처리 -->
             <transform from="($[jong_single])($[jung])" to="$[1:cho_mapped]$2" />
             <transform from="\u{11AA}($[jung])" to="\u{11A8}\u{1109}$1" /> <!-- ㄳ → ㄱㅅ -->
@@ -183,12 +199,18 @@
             <transform from="\u{11B6}($[jung])" to="\u{11AF}\u{1112}$1" /> <!-- ㅀ → ㄹㅎ -->
             <transform from="\u{11B9}($[jung])" to="\u{11B8}\u{1109}$1" /> <!-- ㅄ → ㅂㅅ -->
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 천지인 문장부호 순환 -->
             <transform from="\u{002E}\u{002E}" to="," />
             <transform from=",\u{002E}" to="\u{003F}" />
             <transform from="\u{003F}\u{002E}" to="\u{0021}" />
             <transform from="\u{0021}\u{002E}" to="\u{002E}" />
 
+        </transformGroup>
+
+        <transformGroup>
             <!-- 스페이스 1회로 조합 끊기, 2회로 공백 -->
             <transform from="\m{break}\m{break}" to=" " />
             <transform from=" \m{break}" to="  " />
