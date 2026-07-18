@@ -33,6 +33,7 @@ ko-danmoeum | 단모음
 ko-dinggul | 딩굴
 ko-moakey | 모아키
 ko-chunjiin | 천지인
+ko-chunjiin-plus | 천지인 플러스
 ko-halfqwerty | 하프쿼티
 
 ## Roadmap

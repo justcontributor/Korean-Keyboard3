@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
+<keyboard3 locale="ko" conformsTo="48">
+    <info name="Korean Chunjiin Plus Keyboard" indicator="KO" />
+    <!-- 한국어 천지인 플러스 키보드 (조합형 낱자 기반) -->
+    <displays>
+        <display keyId="base" display="한글" />
+        <display keyId="shift" display="\u{21EA}" />
+        <display keyId="unshift" display="\u{21EA}'" />
+        <display keyId="symbol" display="!#1" />
+        <display keyId="symbol-1" display="1/2" />
+        <display keyId="symbol-2" display="2/2" />
+        <display keyId="bksp" display="⌫" />
+        <display keyId="enter" display="⏎" />
+        <display keyId="extra" display="🌐" />
+        <display keyId="space" display="␣" />
+
+        <display keyId="punc1" display=".," />
+        <display keyId="punc2" display="?!" />
+    </displays>
+
+    <keys>
+        <key id="ko-i" output="\u{1175}" />
+        <key id="ko-area" output="\u{119E}" />
+        <key id="ko-eu" output="\u{1173}" />
+
+        <key id="ko-g" output="\u{1100}" width="0.5" />
+        <key id="ko-n" output="\u{1102}" width="0.5" />
+        <key id="ko-d" output="\u{1103}" width="0.5" />
+        <key id="ko-r" output="\u{1105}" width="0.5" />
+        <key id="ko-m" output="\u{1106}" width="0.5" />
+        <key id="ko-b" output="\u{1107}" width="0.5" />
+        <key id="ko-s" output="\u{1109}" width="0.5" />
+        <key id="ko-ng" output="\u{110B}" width="0.5" />
+        <key id="ko-j" output="\u{110C}" width="0.5" />
+        <key id="ko-ch" output="\u{110E}" width="0.5" />
+        <key id="ko-k" output="\u{110F}" width="0.5" />
+        <key id="ko-t" output="\u{1110}" width="0.5" />
+        <key id="ko-p" output="\u{1111}" width="0.5" />
+        <key id="ko-h" output="\u{1112}" width="0.5" />
+
+        <key id="base" layerId="base" />
+        <key id="shift" layerId="touch-shift" />
+        <key id="unshift" layerId="base" />
+        <key id="symbol" layerId="symbol-1" width="0.5" />
+        <key id="symbol-1" layerId="symbol-1" />
+        <key id="symbol-2" layerId="symbol-2" />
+        <key id="bksp" output="@k3lp:action/backspace" />
+        <key id="extra" layerId="english-base" width="0.5" />
+        <key id="enter" output="\u{000A}" />
+        <key id="space" output="\m{break}" />
+
+        <key id="punc1" output="." width="0.5" />
+        <key id="punc2" output="?" width="0.5" />
+    </keys>
+
+    <layers formId="touch">
+        <layer id="base">
+            <row keys="ko-i ko-area ko-eu bksp" />
+            <row keys="ko-g ko-k ko-n ko-r ko-d ko-t enter" />
+            <row keys="ko-b ko-p ko-s ko-h ko-j ko-ch punc1 punc2" />
+            <row keys="symbol extra ko-ng ko-m space gap" />
+        </layer>
+    </layers>
+
+    <variables>
+        <set id="cho"
+            value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1104} \u{1105} \u{1106} \u{1107} \u{1108} \u{1109} \u{110A} \u{110B} \u{110C} \u{110D} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+        <set id="jung"
+            value="\u{1161} \u{1162} \u{1163} \u{1164} \u{1165} \u{1166} \u{1167} \u{1168} \u{1169} \u{116A} \u{116B} \u{116C} \u{116D} \u{116E} \u{116F} \u{1170} \u{1171} \u{1172} \u{1173} \u{1174} \u{1175} \u{119E}" />
+        <set id="cho_for_jong"
+            value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1105} \u{1106} \u{1107} \u{1109} \u{110A} \u{110B} \u{110C} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+        <set id="jong_mapped"
+            value="\u{11A8} \u{11A9} \u{11AB} \u{11AE} \u{11AF} \u{11B7} \u{11B8} \u{11BA} \u{11BB} \u{11BC} \u{11BD} \u{11BE} \u{11BF} \u{11C0} \u{11C1} \u{11C2}" />
+        <set id="jong_single"
+            value="\u{11A8} \u{11A9} \u{11AB} \u{11AE} \u{11AF} \u{11B7} \u{11B8} \u{11BA} \u{11BB} \u{11BC} \u{11BD} \u{11BE} \u{11BF} \u{11C0} \u{11C1} \u{11C2}" />
+        <set id="cho_mapped"
+            value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1105} \u{1106} \u{1107} \u{1109} \u{110A} \u{110B} \u{110C} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+    </variables>
+
+    <transforms type="simple">
+        <transformGroup>
+            <!-- 천지인 모음 합성 -->
+            <transform from="\u{119E}\u{119E}" to="\u{11A2}" />
+            <transform from="\u{1175}\u{119E}" to="\u{1161}" />
+            <transform from="\u{1161}\u{119E}" to="\u{1163}" />
+            <transform from="\u{119E}\u{1175}" to="\u{1165}" />
+            <transform from="\u{11A2}\u{1175}" to="\u{1167}" />
+            <transform from="\u{119E}\u{1173}" to="\u{1169}" />
+            <transform from="\u{11A2}\u{1173}" to="\u{116D}" />
+            <transform from="\u{1173}\u{119E}" to="\u{116E}" />
+            <transform from="\u{116E}\u{119E}" to="\u{1172}" />
+            <transform from="\u{1161}\u{1175}" to="\u{1162}" />
+            <transform from="\u{1163}\u{1175}" to="\u{1164}" />
+            <transform from="\u{1165}\u{1175}" to="\u{1166}" />
+            <transform from="\u{1167}\u{1175}" to="\u{1168}" />
+            <transform from="\u{1169}\u{1175}" to="\u{116C}" />
+            <transform from="\u{116C}\u{119E}" to="\u{116A}" />
+            <transform from="\u{116A}\u{1175}" to="\u{116B}" />
+            <transform from="\u{116E}\u{1175}" to="\u{1171}" />
+            <transform from="\u{1172}\u{1175}" to="\u{116F}" />
+            <transform from="\u{116F}\u{1175}" to="\u{1170}" />
+            <transform from="\u{1173}\u{1175}" to="\u{1174}" />
+
+            <!-- 초성 쌍자음 순환 -->
+            <transform from="\u{1100}\u{1100}" to="\u{1101}" /> <!-- ㄱㄱ → ㄲ -->
+            <transform from="\u{1101}\u{1100}" to="\u{1100}" /> <!-- ㄲㄱ → ㄱ -->
+
+            <transform from="\u{1103}\u{1103}" to="\u{1104}" /> <!-- ㄷㄷ → ㄸ -->
+            <transform from="\u{1104}\u{1103}" to="\u{1103}" /> <!-- ㄸㄷ → ㄷ -->
+
+            <transform from="\u{1107}\u{1107}" to="\u{1108}" /> <!-- ㅂㅂ → ㅃ -->
+            <transform from="\u{1108}\u{1107}" to="\u{1107}" /> <!-- ㅃㅂ → ㅂ -->
+
+            <transform from="\u{1109}\u{1109}" to="\u{110A}" /> <!-- ㅅㅅ → ㅆ -->
+            <transform from="\u{110A}\u{1109}" to="\u{1109}" /> <!-- ㅆㅅ → ㅅ -->
+
+            <transform from="\u{110C}\u{110C}" to="\u{110D}" /> <!-- ㅈㅈ → ㅉ -->
+            <transform from="\u{110D}\u{110C}" to="\u{110C}" /> <!-- ㅉㅈ → ㅈ -->
+
+            <!-- 종성 자리 자음(초성)을 종성으로 이동 -->
+            <transform from="($[cho])($[jung])($[cho_for_jong])" to="$1$2$[3:jong_mapped]" />
+            <!-- 종성 분리로 생성된 초성 뒤에 중성이 붙으면 마커 해제 -->
+            <transform from="\m{doubled}($[jung])" to="$1" />
+
+            <!-- 종성 쌍자음 순환 -->
+            <transform from="\u{11A8}\u{1100}" to="\u{11A9}" /> <!-- ᆨㄱ → ᆩ -->
+            <transform from="\u{11A9}\u{1100}" to="\u{11A8}" /> <!-- ᆩㄱ → ᆨ -->
+
+            
+            <transform from="\u{11AE}\u{1103}" to="\u{1104}\m{doubled}" /> <!-- ᆮㄷ → ㄸ(초성) -->
+            <transform from="\u{1104}\m{doubled}\u{1103}" to="\u{1103}" />
+            
+            <transform from="\u{11B8}\u{1107}" to="\u{1108}\m{doubled}" /> <!-- ᆸㅂ → ㅃ(초성) -->
+            <transform from="\u{1108}\m{doubled}\u{1107}" to="\u{1107}" />
+            
+            <transform from="\u{11BA}\u{1109}" to="\u{11BB}" /> <!-- ᆺㅅ → ᆻ -->
+            <transform from="\u{11BB}\u{1109}" to="\u{11BA}" /> <!-- ᆻㅅ → ᆺ -->
+
+            <transform from="\u{11BD}\u{110C}" to="\u{110D}\m{doubled}" /> <!-- ᆽㅈ → ㅉ(초성) -->
+            <transform from="\u{110D}\m{doubled}\u{110C}" to="\u{110C}" />
+
+            <!-- 이중 종성 생성 -->
+            <transform from="\u{11A8}\u{1109}" to="\u{11AA}" /> <!-- ᆨㅅ → ᆪ -->
+            <transform from="\u{11AB}\u{110C}" to="\u{11AC}" /> <!-- ᆫㅈ → ᆬ -->
+            <transform from="\u{11AB}\u{1112}" to="\u{11AD}" /> <!-- ᆫㅎ → ᆭ -->
+            <transform from="\u{11AF}\u{1100}" to="\u{11B0}" /> <!-- ᆯㄱ → ᆰ -->
+            <transform from="\u{11AF}\u{1106}" to="\u{11B1}" /> <!-- ᆯㅁ → ᆱ -->
+            <transform from="\u{11AF}\u{1107}" to="\u{11B2}" /> <!-- ᆯㅂ → ᆲ -->
+            <transform from="\u{11AF}\u{1109}" to="\u{11B3}" /> <!-- ᆯㅅ → ᆳ -->
+            <transform from="\u{11AF}\u{1110}" to="\u{11B4}" /> <!-- ᆯㅌ → ᆴ -->
+            <transform from="\u{11AF}\u{1111}" to="\u{11B5}" /> <!-- ᆯㅍ → ᆵ -->
+            <transform from="\u{11AF}\u{1112}" to="\u{11B6}" /> <!-- ᆯㅎ → ᆶ -->
+            <transform from="\u{11B8}\u{1109}" to="\u{11B9}" /> <!-- ᆸㅅ → ᆹ -->
+
+            <!-- 이중 종성 해제 -->
+            <transform from="\u{11AA}\u{1109}" to="\u{11A8}\u{110A}\m{doubled}" /> <!-- ᆪㅅ → ᆨㅆ(초성) -->
+            <transform from="\u{11AC}\u{110C}" to="\u{11AB}\u{110D}\m{doubled}" /> <!-- ᆬㅈ → ᆫㅉ(초성) -->
+            <transform from="\u{11B0}\u{1100}" to="\u{11AF}\u{1101}\m{doubled}" /> <!-- ᆰㄱ → ᆯㄲ(초성) -->
+            <transform from="\u{11B2}\u{1107}" to="\u{11AF}\u{1108}\m{doubled}" /> <!-- ᆲㅂ → ᆯㅃ(초성) -->
+            <transform from="\u{11B3}\u{1109}" to="\u{11AF}\u{110A}\m{doubled}" /> <!-- ᆳㅅ → ᆯㅆ(초성) -->
+            <transform from="\u{11B9}\u{1109}" to="\u{11B8}\u{110A}\m{doubled}" /> <!-- ᆹㅅ → ᆸㅆ(초성) -->
+
+            <!-- 연음 -->
+            <transform from="($[jong_single])($[jung])" to="$[1:cho_mapped]$2" />
+            <transform from="\u{11AA}($[jung])" to="\u{11A8}\u{1109}$1" /> <!-- ㄳ → ㄱㅅ -->
+            <transform from="\u{11AC}($[jung])" to="\u{11AB}\u{110C}$1" /> <!-- ㄵ → ㄴㅈ -->
+            <transform from="\u{11AD}($[jung])" to="\u{11AB}\u{1112}$1" /> <!-- ㄶ → ㄴㅎ -->
+            <transform from="\u{11B0}($[jung])" to="\u{11AF}\u{1100}$1" /> <!-- ㄺ → ㄹㄱ -->
+            <transform from="\u{11B1}($[jung])" to="\u{11AF}\u{1106}$1" /> <!-- ㄻ → ㄹㅁ -->
+            <transform from="\u{11B2}($[jung])" to="\u{11AF}\u{1107}$1" /> <!-- ㄼ → ㄹㅂ -->
+            <transform from="\u{11B3}($[jung])" to="\u{11AF}\u{1109}$1" /> <!-- ㄽ → ㄹㅅ -->
+            <transform from="\u{11B4}($[jung])" to="\u{11AF}\u{1110}$1" /> <!-- ㄾ → ㄹㅌ -->
+            <transform from="\u{11B5}($[jung])" to="\u{11AF}\u{1111}$1" /> <!-- ㄿ → ㄹㅍ -->
+            <transform from="\u{11B6}($[jung])" to="\u{11AF}\u{1112}$1" /> <!-- ㅀ → ㄹㅎ -->
+            <transform from="\u{11B9}($[jung])" to="\u{11B8}\u{1109}$1" /> <!-- ㅄ → ㅂㅅ -->
+
+            <!-- 문장부호 순환 -->
+            <transform from="\u{002E}\u{002E}" to="," />
+            <transform from=",\u{002E}" to="\u{002E}" />
+            <transform from="\u{003F}\u{003F}" to="\u{0021}" />
+            <transform from="\u{0021}\u{003F}" to="\u{003F}" />
+        </transformGroup>
+        <transformGroup>
+            <!-- 처리 완료 후 마커 및 스페이스 정리 -->
+            <transform from="\m{break}\m{break}" to=" " />
+            <transform from=" \m{break}" to="  " />
+            <transform from="\m{doubled}" to="" />
+        </transformGroup>
+    </transforms>
+</keyboard3>
