@@ -3,8 +3,7 @@
 <keyboard3 locale="ko" conformsTo="48">
     <info name="Korean Moakey Keyboard" indicator="KO" />
     <!-- 한국어 모아키 키보드 -->
-    <!-- TODO: 한글 특성상 Keyboard3로 모든 자모 조합 구현 시 지나치게 방대해져 보류. -->
-    <!--       현재는 자음을 누른 뒤, 모음을 플릭으로 따로 입력하도록 구현되었으나, 더 나은 방법 찾아야 함. -->
+    <!-- INFO: 조합형으로 구현되었으므로 시스템에서 조합형 입력 및 글꼴을 지원해야 합니다. -->
     <displays>
         <display keyId="base" display="한글" />
         <display keyId="shift" display="\u{21EA}" />
@@ -19,52 +18,450 @@
     </displays>
 
     <keys>
-        <key id="ko-g" flickId="moakey-vowels" output="ㄱ" />
-        <key id="ko-n" flickId="moakey-vowels" output="ㄴ" />
-        <key id="ko-d" flickId="moakey-vowels" output="ㄷ" />
-        <key id="ko-r" flickId="moakey-vowels" output="ㄹ" />
-        <key id="ko-m" flickId="moakey-vowels" output="ㅁ" />
-        <key id="ko-b" flickId="moakey-vowels" output="ㅂ" />
-        <key id="ko-s" flickId="moakey-vowels" output="ㅅ" />
-        <key id="ko-ng" flickId="moakey-vowels" output="ㅇ" />
-        <key id="ko-j" flickId="moakey-vowels" output="ㅈ" />
-        <key id="ko-ch" flickId="moakey-vowels" output="ㅊ" />
-        <key id="ko-k" flickId="moakey-vowels" output="ㅋ" />
-        <key id="ko-t" flickId="moakey-vowels" output="ㅌ" />
-        <key id="ko-p" flickId="moakey-vowels" output="ㅍ" />
-        <key id="ko-h" flickId="moakey-vowels" output="ㅎ" />
+        <key id="ko-g" flickId="moakey-g" output="\u{1100}" />
+        <key id="ko-n" flickId="moakey-n" output="\u{1102}" />
+        <key id="ko-d" flickId="moakey-d" output="\u{1103}" />
+        <key id="ko-r" flickId="moakey-r" output="\u{1105}" />
+        <key id="ko-m" flickId="moakey-m" output="\u{1106}" />
+        <key id="ko-b" flickId="moakey-b" output="\u{1107}" />
+        <key id="ko-s" flickId="moakey-s" output="\u{1109}" />
+        <key id="ko-ng" flickId="moakey-ng" output="\u{110B}" />
+        <key id="ko-j" flickId="moakey-j" output="\u{110C}" />
+        <key id="ko-ch" flickId="moakey-ch" output="\u{110E}" />
+        <key id="ko-k" flickId="moakey-k" output="\u{110F}" />
+        <key id="ko-t" flickId="moakey-t" output="\u{1110}" />
+        <key id="ko-p" flickId="moakey-p" output="\u{1111}" />
+        <key id="ko-h" flickId="moakey-h" output="\u{1112}" />
+        <key id="ko-gg" flickId="moakey-gg" output="\u{1101}" />
+        <key id="ko-dd" flickId="moakey-dd" output="\u{1104}" />
+        <key id="ko-bb" flickId="moakey-bb" output="\u{1108}" />
+        <key id="ko-ss" flickId="moakey-ss" output="\u{110A}" />
+        <key id="ko-jj" flickId="moakey-jj" output="\u{110D}" />
 
-        <key id="ko-bb" flickId="moakey-vowels" output="ㅃ" />
-        <key id="ko-jj" flickId="moakey-vowels" output="ㅉ" />
-        <key id="ko-dd" flickId="moakey-vowels" output="ㄸ" />
-        <key id="ko-gg" flickId="moakey-vowels" output="ㄲ" />
-        <key id="ko-ss" flickId="moakey-vowels" output="ㅆ" />
+        <!-- Flick Combination Keys (Consonant + Vowel) -->
+        <key id="ko-g-o" output="\u{1100}\u{1169}" />
+        <key id="ko-g-a" output="\u{1100}\u{1161}" />
+        <key id="ko-g-u" output="\u{1100}\u{116E}" />
+        <key id="ko-g-eo" output="\u{1100}\u{1165}" />
+        <key id="ko-g-i" output="\u{1100}\u{1175}" />
+        <key id="ko-g-eu" output="\u{1100}\u{1173}" />
+        <key id="ko-g-wa" output="\u{1100}\u{116A}" />
+        <key id="ko-g-wo" output="\u{1100}\u{116F}" />
+        <key id="ko-g-oe" output="\u{1100}\u{116C}" />
+        <key id="ko-g-wi" output="\u{1100}\u{1171}" />
+        <key id="ko-g-ae" output="\u{1100}\u{1162}" />
+        <key id="ko-g-e" output="\u{1100}\u{1166}" />
+        <key id="ko-g-eui" output="\u{1100}\u{1174}" />
+        <key id="ko-g-yo" output="\u{1100}\u{116D}" />
+        <key id="ko-g-yu" output="\u{1100}\u{1172}" />
+        <key id="ko-g-ya" output="\u{1100}\u{1163}" />
+        <key id="ko-g-yeo" output="\u{1100}\u{1167}" />
+        <key id="ko-g-wae" output="\u{1100}\u{116B}" />
+        <key id="ko-g-we" output="\u{1100}\u{1170}" />
+        <key id="ko-g-yae" output="\u{1100}\u{1164}" />
+        <key id="ko-g-ye" output="\u{1100}\u{1168}" />
+        <key id="ko-n-o" output="\u{1102}\u{1169}" />
+        <key id="ko-n-a" output="\u{1102}\u{1161}" />
+        <key id="ko-n-u" output="\u{1102}\u{116E}" />
+        <key id="ko-n-eo" output="\u{1102}\u{1165}" />
+        <key id="ko-n-i" output="\u{1102}\u{1175}" />
+        <key id="ko-n-eu" output="\u{1102}\u{1173}" />
+        <key id="ko-n-wa" output="\u{1102}\u{116A}" />
+        <key id="ko-n-wo" output="\u{1102}\u{116F}" />
+        <key id="ko-n-oe" output="\u{1102}\u{116C}" />
+        <key id="ko-n-wi" output="\u{1102}\u{1171}" />
+        <key id="ko-n-ae" output="\u{1102}\u{1162}" />
+        <key id="ko-n-e" output="\u{1102}\u{1166}" />
+        <key id="ko-n-eui" output="\u{1102}\u{1174}" />
+        <key id="ko-n-yo" output="\u{1102}\u{116D}" />
+        <key id="ko-n-yu" output="\u{1102}\u{1172}" />
+        <key id="ko-n-ya" output="\u{1102}\u{1163}" />
+        <key id="ko-n-yeo" output="\u{1102}\u{1167}" />
+        <key id="ko-n-wae" output="\u{1102}\u{116B}" />
+        <key id="ko-n-we" output="\u{1102}\u{1170}" />
+        <key id="ko-n-yae" output="\u{1102}\u{1164}" />
+        <key id="ko-n-ye" output="\u{1102}\u{1168}" />
+        <key id="ko-d-o" output="\u{1103}\u{1169}" />
+        <key id="ko-d-a" output="\u{1103}\u{1161}" />
+        <key id="ko-d-u" output="\u{1103}\u{116E}" />
+        <key id="ko-d-eo" output="\u{1103}\u{1165}" />
+        <key id="ko-d-i" output="\u{1103}\u{1175}" />
+        <key id="ko-d-eu" output="\u{1103}\u{1173}" />
+        <key id="ko-d-wa" output="\u{1103}\u{116A}" />
+        <key id="ko-d-wo" output="\u{1103}\u{116F}" />
+        <key id="ko-d-oe" output="\u{1103}\u{116C}" />
+        <key id="ko-d-wi" output="\u{1103}\u{1171}" />
+        <key id="ko-d-ae" output="\u{1103}\u{1162}" />
+        <key id="ko-d-e" output="\u{1103}\u{1166}" />
+        <key id="ko-d-eui" output="\u{1103}\u{1174}" />
+        <key id="ko-d-yo" output="\u{1103}\u{116D}" />
+        <key id="ko-d-yu" output="\u{1103}\u{1172}" />
+        <key id="ko-d-ya" output="\u{1103}\u{1163}" />
+        <key id="ko-d-yeo" output="\u{1103}\u{1167}" />
+        <key id="ko-d-wae" output="\u{1103}\u{116B}" />
+        <key id="ko-d-we" output="\u{1103}\u{1170}" />
+        <key id="ko-d-yae" output="\u{1103}\u{1164}" />
+        <key id="ko-d-ye" output="\u{1103}\u{1168}" />
+        <key id="ko-r-o" output="\u{1105}\u{1169}" />
+        <key id="ko-r-a" output="\u{1105}\u{1161}" />
+        <key id="ko-r-u" output="\u{1105}\u{116E}" />
+        <key id="ko-r-eo" output="\u{1105}\u{1165}" />
+        <key id="ko-r-i" output="\u{1105}\u{1175}" />
+        <key id="ko-r-eu" output="\u{1105}\u{1173}" />
+        <key id="ko-r-wa" output="\u{1105}\u{116A}" />
+        <key id="ko-r-wo" output="\u{1105}\u{116F}" />
+        <key id="ko-r-oe" output="\u{1105}\u{116C}" />
+        <key id="ko-r-wi" output="\u{1105}\u{1171}" />
+        <key id="ko-r-ae" output="\u{1105}\u{1162}" />
+        <key id="ko-r-e" output="\u{1105}\u{1166}" />
+        <key id="ko-r-eui" output="\u{1105}\u{1174}" />
+        <key id="ko-r-yo" output="\u{1105}\u{116D}" />
+        <key id="ko-r-yu" output="\u{1105}\u{1172}" />
+        <key id="ko-r-ya" output="\u{1105}\u{1163}" />
+        <key id="ko-r-yeo" output="\u{1105}\u{1167}" />
+        <key id="ko-r-wae" output="\u{1105}\u{116B}" />
+        <key id="ko-r-we" output="\u{1105}\u{1170}" />
+        <key id="ko-r-yae" output="\u{1105}\u{1164}" />
+        <key id="ko-r-ye" output="\u{1105}\u{1168}" />
+        <key id="ko-m-o" output="\u{1106}\u{1169}" />
+        <key id="ko-m-a" output="\u{1106}\u{1161}" />
+        <key id="ko-m-u" output="\u{1106}\u{116E}" />
+        <key id="ko-m-eo" output="\u{1106}\u{1165}" />
+        <key id="ko-m-i" output="\u{1106}\u{1175}" />
+        <key id="ko-m-eu" output="\u{1106}\u{1173}" />
+        <key id="ko-m-wa" output="\u{1106}\u{116A}" />
+        <key id="ko-m-wo" output="\u{1106}\u{116F}" />
+        <key id="ko-m-oe" output="\u{1106}\u{116C}" />
+        <key id="ko-m-wi" output="\u{1106}\u{1171}" />
+        <key id="ko-m-ae" output="\u{1106}\u{1162}" />
+        <key id="ko-m-e" output="\u{1106}\u{1166}" />
+        <key id="ko-m-eui" output="\u{1106}\u{1174}" />
+        <key id="ko-m-yo" output="\u{1106}\u{116D}" />
+        <key id="ko-m-yu" output="\u{1106}\u{1172}" />
+        <key id="ko-m-ya" output="\u{1106}\u{1163}" />
+        <key id="ko-m-yeo" output="\u{1106}\u{1167}" />
+        <key id="ko-m-wae" output="\u{1106}\u{116B}" />
+        <key id="ko-m-we" output="\u{1106}\u{1170}" />
+        <key id="ko-m-yae" output="\u{1106}\u{1164}" />
+        <key id="ko-m-ye" output="\u{1106}\u{1168}" />
+        <key id="ko-b-o" output="\u{1107}\u{1169}" />
+        <key id="ko-b-a" output="\u{1107}\u{1161}" />
+        <key id="ko-b-u" output="\u{1107}\u{116E}" />
+        <key id="ko-b-eo" output="\u{1107}\u{1165}" />
+        <key id="ko-b-i" output="\u{1107}\u{1175}" />
+        <key id="ko-b-eu" output="\u{1107}\u{1173}" />
+        <key id="ko-b-wa" output="\u{1107}\u{116A}" />
+        <key id="ko-b-wo" output="\u{1107}\u{116F}" />
+        <key id="ko-b-oe" output="\u{1107}\u{116C}" />
+        <key id="ko-b-wi" output="\u{1107}\u{1171}" />
+        <key id="ko-b-ae" output="\u{1107}\u{1162}" />
+        <key id="ko-b-e" output="\u{1107}\u{1166}" />
+        <key id="ko-b-eui" output="\u{1107}\u{1174}" />
+        <key id="ko-b-yo" output="\u{1107}\u{116D}" />
+        <key id="ko-b-yu" output="\u{1107}\u{1172}" />
+        <key id="ko-b-ya" output="\u{1107}\u{1163}" />
+        <key id="ko-b-yeo" output="\u{1107}\u{1167}" />
+        <key id="ko-b-wae" output="\u{1107}\u{116B}" />
+        <key id="ko-b-we" output="\u{1107}\u{1170}" />
+        <key id="ko-b-yae" output="\u{1107}\u{1164}" />
+        <key id="ko-b-ye" output="\u{1107}\u{1168}" />
+        <key id="ko-s-o" output="\u{1109}\u{1169}" />
+        <key id="ko-s-a" output="\u{1109}\u{1161}" />
+        <key id="ko-s-u" output="\u{1109}\u{116E}" />
+        <key id="ko-s-eo" output="\u{1109}\u{1165}" />
+        <key id="ko-s-i" output="\u{1109}\u{1175}" />
+        <key id="ko-s-eu" output="\u{1109}\u{1173}" />
+        <key id="ko-s-wa" output="\u{1109}\u{116A}" />
+        <key id="ko-s-wo" output="\u{1109}\u{116F}" />
+        <key id="ko-s-oe" output="\u{1109}\u{116C}" />
+        <key id="ko-s-wi" output="\u{1109}\u{1171}" />
+        <key id="ko-s-ae" output="\u{1109}\u{1162}" />
+        <key id="ko-s-e" output="\u{1109}\u{1166}" />
+        <key id="ko-s-eui" output="\u{1109}\u{1174}" />
+        <key id="ko-s-yo" output="\u{1109}\u{116D}" />
+        <key id="ko-s-yu" output="\u{1109}\u{1172}" />
+        <key id="ko-s-ya" output="\u{1109}\u{1163}" />
+        <key id="ko-s-yeo" output="\u{1109}\u{1167}" />
+        <key id="ko-s-wae" output="\u{1109}\u{116B}" />
+        <key id="ko-s-we" output="\u{1109}\u{1170}" />
+        <key id="ko-s-yae" output="\u{1109}\u{1164}" />
+        <key id="ko-s-ye" output="\u{1109}\u{1168}" />
+        <key id="ko-ng-o" output="\u{110B}\u{1169}" />
+        <key id="ko-ng-a" output="\u{110B}\u{1161}" />
+        <key id="ko-ng-u" output="\u{110B}\u{116E}" />
+        <key id="ko-ng-eo" output="\u{110B}\u{1165}" />
+        <key id="ko-ng-i" output="\u{110B}\u{1175}" />
+        <key id="ko-ng-eu" output="\u{110B}\u{1173}" />
+        <key id="ko-ng-wa" output="\u{110B}\u{116A}" />
+        <key id="ko-ng-wo" output="\u{110B}\u{116F}" />
+        <key id="ko-ng-oe" output="\u{110B}\u{116C}" />
+        <key id="ko-ng-wi" output="\u{110B}\u{1171}" />
+        <key id="ko-ng-ae" output="\u{110B}\u{1162}" />
+        <key id="ko-ng-e" output="\u{110B}\u{1166}" />
+        <key id="ko-ng-eui" output="\u{110B}\u{1174}" />
+        <key id="ko-ng-yo" output="\u{110B}\u{116D}" />
+        <key id="ko-ng-yu" output="\u{110B}\u{1172}" />
+        <key id="ko-ng-ya" output="\u{110B}\u{1163}" />
+        <key id="ko-ng-yeo" output="\u{110B}\u{1167}" />
+        <key id="ko-ng-wae" output="\u{110B}\u{116B}" />
+        <key id="ko-ng-we" output="\u{110B}\u{1170}" />
+        <key id="ko-ng-yae" output="\u{110B}\u{1164}" />
+        <key id="ko-ng-ye" output="\u{110B}\u{1168}" />
+        <key id="ko-j-o" output="\u{110C}\u{1169}" />
+        <key id="ko-j-a" output="\u{110C}\u{1161}" />
+        <key id="ko-j-u" output="\u{110C}\u{116E}" />
+        <key id="ko-j-eo" output="\u{110C}\u{1165}" />
+        <key id="ko-j-i" output="\u{110C}\u{1175}" />
+        <key id="ko-j-eu" output="\u{110C}\u{1173}" />
+        <key id="ko-j-wa" output="\u{110C}\u{116A}" />
+        <key id="ko-j-wo" output="\u{110C}\u{116F}" />
+        <key id="ko-j-oe" output="\u{110C}\u{116C}" />
+        <key id="ko-j-wi" output="\u{110C}\u{1171}" />
+        <key id="ko-j-ae" output="\u{110C}\u{1162}" />
+        <key id="ko-j-e" output="\u{110C}\u{1166}" />
+        <key id="ko-j-eui" output="\u{110C}\u{1174}" />
+        <key id="ko-j-yo" output="\u{110C}\u{116D}" />
+        <key id="ko-j-yu" output="\u{110C}\u{1172}" />
+        <key id="ko-j-ya" output="\u{110C}\u{1163}" />
+        <key id="ko-j-yeo" output="\u{110C}\u{1167}" />
+        <key id="ko-j-wae" output="\u{110C}\u{116B}" />
+        <key id="ko-j-we" output="\u{110C}\u{1170}" />
+        <key id="ko-j-yae" output="\u{110C}\u{1164}" />
+        <key id="ko-j-ye" output="\u{110C}\u{1168}" />
+        <key id="ko-ch-o" output="\u{110E}\u{1169}" />
+        <key id="ko-ch-a" output="\u{110E}\u{1161}" />
+        <key id="ko-ch-u" output="\u{110E}\u{116E}" />
+        <key id="ko-ch-eo" output="\u{110E}\u{1165}" />
+        <key id="ko-ch-i" output="\u{110E}\u{1175}" />
+        <key id="ko-ch-eu" output="\u{110E}\u{1173}" />
+        <key id="ko-ch-wa" output="\u{110E}\u{116A}" />
+        <key id="ko-ch-wo" output="\u{110E}\u{116F}" />
+        <key id="ko-ch-oe" output="\u{110E}\u{116C}" />
+        <key id="ko-ch-wi" output="\u{110E}\u{1171}" />
+        <key id="ko-ch-ae" output="\u{110E}\u{1162}" />
+        <key id="ko-ch-e" output="\u{110E}\u{1166}" />
+        <key id="ko-ch-eui" output="\u{110E}\u{1174}" />
+        <key id="ko-ch-yo" output="\u{110E}\u{116D}" />
+        <key id="ko-ch-yu" output="\u{110E}\u{1172}" />
+        <key id="ko-ch-ya" output="\u{110E}\u{1163}" />
+        <key id="ko-ch-yeo" output="\u{110E}\u{1167}" />
+        <key id="ko-ch-wae" output="\u{110E}\u{116B}" />
+        <key id="ko-ch-we" output="\u{110E}\u{1170}" />
+        <key id="ko-ch-yae" output="\u{110E}\u{1164}" />
+        <key id="ko-ch-ye" output="\u{110E}\u{1168}" />
+        <key id="ko-k-o" output="\u{110F}\u{1169}" />
+        <key id="ko-k-a" output="\u{110F}\u{1161}" />
+        <key id="ko-k-u" output="\u{110F}\u{116E}" />
+        <key id="ko-k-eo" output="\u{110F}\u{1165}" />
+        <key id="ko-k-i" output="\u{110F}\u{1175}" />
+        <key id="ko-k-eu" output="\u{110F}\u{1173}" />
+        <key id="ko-k-wa" output="\u{110F}\u{116A}" />
+        <key id="ko-k-wo" output="\u{110F}\u{116F}" />
+        <key id="ko-k-oe" output="\u{110F}\u{116C}" />
+        <key id="ko-k-wi" output="\u{110F}\u{1171}" />
+        <key id="ko-k-ae" output="\u{110F}\u{1162}" />
+        <key id="ko-k-e" output="\u{110F}\u{1166}" />
+        <key id="ko-k-eui" output="\u{110F}\u{1174}" />
+        <key id="ko-k-yo" output="\u{110F}\u{116D}" />
+        <key id="ko-k-yu" output="\u{110F}\u{1172}" />
+        <key id="ko-k-ya" output="\u{110F}\u{1163}" />
+        <key id="ko-k-yeo" output="\u{110F}\u{1167}" />
+        <key id="ko-k-wae" output="\u{110F}\u{116B}" />
+        <key id="ko-k-we" output="\u{110F}\u{1170}" />
+        <key id="ko-k-yae" output="\u{110F}\u{1164}" />
+        <key id="ko-k-ye" output="\u{110F}\u{1168}" />
+        <key id="ko-t-o" output="\u{1110}\u{1169}" />
+        <key id="ko-t-a" output="\u{1110}\u{1161}" />
+        <key id="ko-t-u" output="\u{1110}\u{116E}" />
+        <key id="ko-t-eo" output="\u{1110}\u{1165}" />
+        <key id="ko-t-i" output="\u{1110}\u{1175}" />
+        <key id="ko-t-eu" output="\u{1110}\u{1173}" />
+        <key id="ko-t-wa" output="\u{1110}\u{116A}" />
+        <key id="ko-t-wo" output="\u{1110}\u{116F}" />
+        <key id="ko-t-oe" output="\u{1110}\u{116C}" />
+        <key id="ko-t-wi" output="\u{1110}\u{1171}" />
+        <key id="ko-t-ae" output="\u{1110}\u{1162}" />
+        <key id="ko-t-e" output="\u{1110}\u{1166}" />
+        <key id="ko-t-eui" output="\u{1110}\u{1174}" />
+        <key id="ko-t-yo" output="\u{1110}\u{116D}" />
+        <key id="ko-t-yu" output="\u{1110}\u{1172}" />
+        <key id="ko-t-ya" output="\u{1110}\u{1163}" />
+        <key id="ko-t-yeo" output="\u{1110}\u{1167}" />
+        <key id="ko-t-wae" output="\u{1110}\u{116B}" />
+        <key id="ko-t-we" output="\u{1110}\u{1170}" />
+        <key id="ko-t-yae" output="\u{1110}\u{1164}" />
+        <key id="ko-t-ye" output="\u{1110}\u{1168}" />
+        <key id="ko-p-o" output="\u{1111}\u{1169}" />
+        <key id="ko-p-a" output="\u{1111}\u{1161}" />
+        <key id="ko-p-u" output="\u{1111}\u{116E}" />
+        <key id="ko-p-eo" output="\u{1111}\u{1165}" />
+        <key id="ko-p-i" output="\u{1111}\u{1175}" />
+        <key id="ko-p-eu" output="\u{1111}\u{1173}" />
+        <key id="ko-p-wa" output="\u{1111}\u{116A}" />
+        <key id="ko-p-wo" output="\u{1111}\u{116F}" />
+        <key id="ko-p-oe" output="\u{1111}\u{116C}" />
+        <key id="ko-p-wi" output="\u{1111}\u{1171}" />
+        <key id="ko-p-ae" output="\u{1111}\u{1162}" />
+        <key id="ko-p-e" output="\u{1111}\u{1166}" />
+        <key id="ko-p-eui" output="\u{1111}\u{1174}" />
+        <key id="ko-p-yo" output="\u{1111}\u{116D}" />
+        <key id="ko-p-yu" output="\u{1111}\u{1172}" />
+        <key id="ko-p-ya" output="\u{1111}\u{1163}" />
+        <key id="ko-p-yeo" output="\u{1111}\u{1167}" />
+        <key id="ko-p-wae" output="\u{1111}\u{116B}" />
+        <key id="ko-p-we" output="\u{1111}\u{1170}" />
+        <key id="ko-p-yae" output="\u{1111}\u{1164}" />
+        <key id="ko-p-ye" output="\u{1111}\u{1168}" />
+        <key id="ko-h-o" output="\u{1112}\u{1169}" />
+        <key id="ko-h-a" output="\u{1112}\u{1161}" />
+        <key id="ko-h-u" output="\u{1112}\u{116E}" />
+        <key id="ko-h-eo" output="\u{1112}\u{1165}" />
+        <key id="ko-h-i" output="\u{1112}\u{1175}" />
+        <key id="ko-h-eu" output="\u{1112}\u{1173}" />
+        <key id="ko-h-wa" output="\u{1112}\u{116A}" />
+        <key id="ko-h-wo" output="\u{1112}\u{116F}" />
+        <key id="ko-h-oe" output="\u{1112}\u{116C}" />
+        <key id="ko-h-wi" output="\u{1112}\u{1171}" />
+        <key id="ko-h-ae" output="\u{1112}\u{1162}" />
+        <key id="ko-h-e" output="\u{1112}\u{1166}" />
+        <key id="ko-h-eui" output="\u{1112}\u{1174}" />
+        <key id="ko-h-yo" output="\u{1112}\u{116D}" />
+        <key id="ko-h-yu" output="\u{1112}\u{1172}" />
+        <key id="ko-h-ya" output="\u{1112}\u{1163}" />
+        <key id="ko-h-yeo" output="\u{1112}\u{1167}" />
+        <key id="ko-h-wae" output="\u{1112}\u{116B}" />
+        <key id="ko-h-we" output="\u{1112}\u{1170}" />
+        <key id="ko-h-yae" output="\u{1112}\u{1164}" />
+        <key id="ko-h-ye" output="\u{1112}\u{1168}" />
+        <key id="ko-gg-o" output="\u{1101}\u{1169}" />
+        <key id="ko-gg-a" output="\u{1101}\u{1161}" />
+        <key id="ko-gg-u" output="\u{1101}\u{116E}" />
+        <key id="ko-gg-eo" output="\u{1101}\u{1165}" />
+        <key id="ko-gg-i" output="\u{1101}\u{1175}" />
+        <key id="ko-gg-eu" output="\u{1101}\u{1173}" />
+        <key id="ko-gg-wa" output="\u{1101}\u{116A}" />
+        <key id="ko-gg-wo" output="\u{1101}\u{116F}" />
+        <key id="ko-gg-oe" output="\u{1101}\u{116C}" />
+        <key id="ko-gg-wi" output="\u{1101}\u{1171}" />
+        <key id="ko-gg-ae" output="\u{1101}\u{1162}" />
+        <key id="ko-gg-e" output="\u{1101}\u{1166}" />
+        <key id="ko-gg-eui" output="\u{1101}\u{1174}" />
+        <key id="ko-gg-yo" output="\u{1101}\u{116D}" />
+        <key id="ko-gg-yu" output="\u{1101}\u{1172}" />
+        <key id="ko-gg-ya" output="\u{1101}\u{1163}" />
+        <key id="ko-gg-yeo" output="\u{1101}\u{1167}" />
+        <key id="ko-gg-wae" output="\u{1101}\u{116B}" />
+        <key id="ko-gg-we" output="\u{1101}\u{1170}" />
+        <key id="ko-gg-yae" output="\u{1101}\u{1164}" />
+        <key id="ko-gg-ye" output="\u{1101}\u{1168}" />
+        <key id="ko-dd-o" output="\u{1104}\u{1169}" />
+        <key id="ko-dd-a" output="\u{1104}\u{1161}" />
+        <key id="ko-dd-u" output="\u{1104}\u{116E}" />
+        <key id="ko-dd-eo" output="\u{1104}\u{1165}" />
+        <key id="ko-dd-i" output="\u{1104}\u{1175}" />
+        <key id="ko-dd-eu" output="\u{1104}\u{1173}" />
+        <key id="ko-dd-wa" output="\u{1104}\u{116A}" />
+        <key id="ko-dd-wo" output="\u{1104}\u{116F}" />
+        <key id="ko-dd-oe" output="\u{1104}\u{116C}" />
+        <key id="ko-dd-wi" output="\u{1104}\u{1171}" />
+        <key id="ko-dd-ae" output="\u{1104}\u{1162}" />
+        <key id="ko-dd-e" output="\u{1104}\u{1166}" />
+        <key id="ko-dd-eui" output="\u{1104}\u{1174}" />
+        <key id="ko-dd-yo" output="\u{1104}\u{116D}" />
+        <key id="ko-dd-yu" output="\u{1104}\u{1172}" />
+        <key id="ko-dd-ya" output="\u{1104}\u{1163}" />
+        <key id="ko-dd-yeo" output="\u{1104}\u{1167}" />
+        <key id="ko-dd-wae" output="\u{1104}\u{116B}" />
+        <key id="ko-dd-we" output="\u{1104}\u{1170}" />
+        <key id="ko-dd-yae" output="\u{1104}\u{1164}" />
+        <key id="ko-dd-ye" output="\u{1104}\u{1168}" />
+        <key id="ko-bb-o" output="\u{1108}\u{1169}" />
+        <key id="ko-bb-a" output="\u{1108}\u{1161}" />
+        <key id="ko-bb-u" output="\u{1108}\u{116E}" />
+        <key id="ko-bb-eo" output="\u{1108}\u{1165}" />
+        <key id="ko-bb-i" output="\u{1108}\u{1175}" />
+        <key id="ko-bb-eu" output="\u{1108}\u{1173}" />
+        <key id="ko-bb-wa" output="\u{1108}\u{116A}" />
+        <key id="ko-bb-wo" output="\u{1108}\u{116F}" />
+        <key id="ko-bb-oe" output="\u{1108}\u{116C}" />
+        <key id="ko-bb-wi" output="\u{1108}\u{1171}" />
+        <key id="ko-bb-ae" output="\u{1108}\u{1162}" />
+        <key id="ko-bb-e" output="\u{1108}\u{1166}" />
+        <key id="ko-bb-eui" output="\u{1108}\u{1174}" />
+        <key id="ko-bb-yo" output="\u{1108}\u{116D}" />
+        <key id="ko-bb-yu" output="\u{1108}\u{1172}" />
+        <key id="ko-bb-ya" output="\u{1108}\u{1163}" />
+        <key id="ko-bb-yeo" output="\u{1108}\u{1167}" />
+        <key id="ko-bb-wae" output="\u{1108}\u{116B}" />
+        <key id="ko-bb-we" output="\u{1108}\u{1170}" />
+        <key id="ko-bb-yae" output="\u{1108}\u{1164}" />
+        <key id="ko-bb-ye" output="\u{1108}\u{1168}" />
+        <key id="ko-ss-o" output="\u{110A}\u{1169}" />
+        <key id="ko-ss-a" output="\u{110A}\u{1161}" />
+        <key id="ko-ss-u" output="\u{110A}\u{116E}" />
+        <key id="ko-ss-eo" output="\u{110A}\u{1165}" />
+        <key id="ko-ss-i" output="\u{110A}\u{1175}" />
+        <key id="ko-ss-eu" output="\u{110A}\u{1173}" />
+        <key id="ko-ss-wa" output="\u{110A}\u{116A}" />
+        <key id="ko-ss-wo" output="\u{110A}\u{116F}" />
+        <key id="ko-ss-oe" output="\u{110A}\u{116C}" />
+        <key id="ko-ss-wi" output="\u{110A}\u{1171}" />
+        <key id="ko-ss-ae" output="\u{110A}\u{1162}" />
+        <key id="ko-ss-e" output="\u{110A}\u{1166}" />
+        <key id="ko-ss-eui" output="\u{110A}\u{1174}" />
+        <key id="ko-ss-yo" output="\u{110A}\u{116D}" />
+        <key id="ko-ss-yu" output="\u{110A}\u{1172}" />
+        <key id="ko-ss-ya" output="\u{110A}\u{1163}" />
+        <key id="ko-ss-yeo" output="\u{110A}\u{1167}" />
+        <key id="ko-ss-wae" output="\u{110A}\u{116B}" />
+        <key id="ko-ss-we" output="\u{110A}\u{1170}" />
+        <key id="ko-ss-yae" output="\u{110A}\u{1164}" />
+        <key id="ko-ss-ye" output="\u{110A}\u{1168}" />
+        <key id="ko-jj-o" output="\u{110D}\u{1169}" />
+        <key id="ko-jj-a" output="\u{110D}\u{1161}" />
+        <key id="ko-jj-u" output="\u{110D}\u{116E}" />
+        <key id="ko-jj-eo" output="\u{110D}\u{1165}" />
+        <key id="ko-jj-i" output="\u{110D}\u{1175}" />
+        <key id="ko-jj-eu" output="\u{110D}\u{1173}" />
+        <key id="ko-jj-wa" output="\u{110D}\u{116A}" />
+        <key id="ko-jj-wo" output="\u{110D}\u{116F}" />
+        <key id="ko-jj-oe" output="\u{110D}\u{116C}" />
+        <key id="ko-jj-wi" output="\u{110D}\u{1171}" />
+        <key id="ko-jj-ae" output="\u{110D}\u{1162}" />
+        <key id="ko-jj-e" output="\u{110D}\u{1166}" />
+        <key id="ko-jj-eui" output="\u{110D}\u{1174}" />
+        <key id="ko-jj-yo" output="\u{110D}\u{116D}" />
+        <key id="ko-jj-yu" output="\u{110D}\u{1172}" />
+        <key id="ko-jj-ya" output="\u{110D}\u{1163}" />
+        <key id="ko-jj-yeo" output="\u{110D}\u{1167}" />
+        <key id="ko-jj-wae" output="\u{110D}\u{116B}" />
+        <key id="ko-jj-we" output="\u{110D}\u{1170}" />
+        <key id="ko-jj-yae" output="\u{110D}\u{1164}" />
+        <key id="ko-jj-ye" output="\u{110D}\u{1168}" />
 
-        <key id="ko-a" output="ㅏ" />
-        <key id="ko-ya" output="ㅑ" />
-        <key id="ko-eo" output="ㅓ" />
-        <key id="ko-yeo" output="ㅕ" />
-        <key id="ko-o" output="ㅗ" />
-        <key id="ko-yo" output="ㅛ" />
-        <key id="ko-u" output="ㅜ" />
-        <key id="ko-yu" output="ㅠ" />
-        <key id="ko-eu" output="ㅡ" />
-        <key id="ko-i" output="ㅣ" />
-        <key id="ko-ae" output="ㅐ" />
-        <key id="ko-e" output="ㅔ" />
-        <key id="ko-yae" output="ㅒ" />
-        <key id="ko-ye" output="ㅖ" />
-        <key id="ko-area" output="ㆍ" />
-
-        <key id="ko-oe" output="ㅚ" />
-        <key id="ko-wa" output="ㅘ" />
-        <key id="ko-wi" output="ㅟ" />
-        <key id="ko-wo" output="ㅝ" />
-        <key id="ko-wae" output="ㅙ" />
-        <key id="ko-we" output="ㅞ" />
-        <key id="ko-eui" output="ㅢ" />
-
-        <key id="moeum" output="" />
+        <key id="ko-o" output="\u{1169}" />
+        <key id="ko-a" output="\u{1161}" />
+        <key id="ko-u" output="\u{116E}" />
+        <key id="ko-eo" output="\u{1165}" />
+        <key id="ko-i" output="\u{1175}" />
+        <key id="ko-eu" output="\u{1173}" />
+        <key id="ko-wa" output="\u{116A}" />
+        <key id="ko-wo" output="\u{116F}" />
+        <key id="ko-oe" output="\u{116C}" />
+        <key id="ko-wi" output="\u{1171}" />
+        <key id="ko-ae" output="\u{1162}" />
+        <key id="ko-e" output="\u{1166}" />
+        <key id="ko-eui" output="\u{1174}" />
+        <key id="ko-yo" output="\u{116D}" />
+        <key id="ko-yu" output="\u{1172}" />
+        <key id="ko-ya" output="\u{1163}" />
+        <key id="ko-yeo" output="\u{1167}" />
+        <key id="ko-wae" output="\u{116B}" />
+        <key id="ko-we" output="\u{1170}" />
+        <key id="ko-yae" output="\u{1164}" />
+        <key id="ko-ye" output="\u{1168}" />
+        <key id="ko-area" output="\u{119E}" />
+        <key id="moeum" flickId="moakey-moeum" output="\u{119E}" />
 
         <key id="base" layerId="base" />
         <key id="shift" layerId="touch-shift" />
@@ -76,7 +473,7 @@
         <key id="bksp" output="@k3lp:action/backspace" />
         <key id="extra" layerId="english-base" />
         <key id="enter" output="\u{000A}" />
-        <key id="space" output=" " />
+        <key id="space" output="\m{break}" stretch="true" />
         <key id="comma" output="," />
         <key id="period" output="." />
 
@@ -119,39 +516,559 @@
     </keys>
 
     <flicks>
-        <flick id="moakey-vowels">
-            <flickSegment directions="n" keyId="ko-o" />
-            <flickSegment directions="e" keyId="ko-a" />
-            <flickSegment directions="s" keyId="ko-u" />
-            <flickSegment directions="w" keyId="ko-eo" />
+        <flick id="moakey-g">
+            <flickSegment directions="n" keyId="ko-g-o" />
+            <flickSegment directions="e" keyId="ko-g-a" />
+            <flickSegment directions="s" keyId="ko-g-u" />
+            <flickSegment directions="w" keyId="ko-g-eo" />
+            <flickSegment directions="nw" keyId="ko-g-i" />
+            <flickSegment directions="ne" keyId="ko-g-i" />
+            <flickSegment directions="sw" keyId="ko-g-eu" />
+            <flickSegment directions="se" keyId="ko-g-eu" />
+            <flickSegment directions="n e" keyId="ko-g-wa" />
+            <flickSegment directions="s w" keyId="ko-g-wo" />
+            <flickSegment directions="n s" keyId="ko-g-oe" />
+            <flickSegment directions="s n" keyId="ko-g-wi" />
+            <flickSegment directions="e w" keyId="ko-g-ae" />
+            <flickSegment directions="w e" keyId="ko-g-e" />
+            <flickSegment directions="sw ne" keyId="ko-g-eui" />
+            <flickSegment directions="se nw" keyId="ko-g-eui" />
+            <flickSegment directions="n s n" keyId="ko-g-yo" />
+            <flickSegment directions="s n s" keyId="ko-g-yu" />
+            <flickSegment directions="e w e" keyId="ko-g-ya" />
+            <flickSegment directions="w e w" keyId="ko-g-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-g-wae" />
+            <flickSegment directions="n e w" keyId="ko-g-wae" />
+            <flickSegment directions="s w ne" keyId="ko-g-we" />
+            <flickSegment directions="s w e" keyId="ko-g-we" />
+            <flickSegment directions="e w e w" keyId="ko-g-yae" />
+            <flickSegment directions="w e w e" keyId="ko-g-ye" />
+        </flick>
 
-            <flickSegment directions="nw" keyId="ko-i" />
-            <flickSegment directions="ne" keyId="ko-i" />
-            <flickSegment directions="sw" keyId="ko-eu" />
-            <flickSegment directions="se" keyId="ko-eu" />
+        <flick id="moakey-n">
+            <flickSegment directions="n" keyId="ko-n-o" />
+            <flickSegment directions="e" keyId="ko-n-a" />
+            <flickSegment directions="s" keyId="ko-n-u" />
+            <flickSegment directions="w" keyId="ko-n-eo" />
+            <flickSegment directions="nw" keyId="ko-n-i" />
+            <flickSegment directions="ne" keyId="ko-n-i" />
+            <flickSegment directions="sw" keyId="ko-n-eu" />
+            <flickSegment directions="se" keyId="ko-n-eu" />
+            <flickSegment directions="n e" keyId="ko-n-wa" />
+            <flickSegment directions="s w" keyId="ko-n-wo" />
+            <flickSegment directions="n s" keyId="ko-n-oe" />
+            <flickSegment directions="s n" keyId="ko-n-wi" />
+            <flickSegment directions="e w" keyId="ko-n-ae" />
+            <flickSegment directions="w e" keyId="ko-n-e" />
+            <flickSegment directions="sw ne" keyId="ko-n-eui" />
+            <flickSegment directions="se nw" keyId="ko-n-eui" />
+            <flickSegment directions="n s n" keyId="ko-n-yo" />
+            <flickSegment directions="s n s" keyId="ko-n-yu" />
+            <flickSegment directions="e w e" keyId="ko-n-ya" />
+            <flickSegment directions="w e w" keyId="ko-n-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-n-wae" />
+            <flickSegment directions="n e w" keyId="ko-n-wae" />
+            <flickSegment directions="s w ne" keyId="ko-n-we" />
+            <flickSegment directions="s w e" keyId="ko-n-we" />
+            <flickSegment directions="e w e w" keyId="ko-n-yae" />
+            <flickSegment directions="w e w e" keyId="ko-n-ye" />
+        </flick>
 
-            <flickSegment directions="n e" keyId="ko-wa" />
-            <flickSegment directions="s w" keyId="ko-wo" />
+        <flick id="moakey-d">
+            <flickSegment directions="n" keyId="ko-d-o" />
+            <flickSegment directions="e" keyId="ko-d-a" />
+            <flickSegment directions="s" keyId="ko-d-u" />
+            <flickSegment directions="w" keyId="ko-d-eo" />
+            <flickSegment directions="nw" keyId="ko-d-i" />
+            <flickSegment directions="ne" keyId="ko-d-i" />
+            <flickSegment directions="sw" keyId="ko-d-eu" />
+            <flickSegment directions="se" keyId="ko-d-eu" />
+            <flickSegment directions="n e" keyId="ko-d-wa" />
+            <flickSegment directions="s w" keyId="ko-d-wo" />
+            <flickSegment directions="n s" keyId="ko-d-oe" />
+            <flickSegment directions="s n" keyId="ko-d-wi" />
+            <flickSegment directions="e w" keyId="ko-d-ae" />
+            <flickSegment directions="w e" keyId="ko-d-e" />
+            <flickSegment directions="sw ne" keyId="ko-d-eui" />
+            <flickSegment directions="se nw" keyId="ko-d-eui" />
+            <flickSegment directions="n s n" keyId="ko-d-yo" />
+            <flickSegment directions="s n s" keyId="ko-d-yu" />
+            <flickSegment directions="e w e" keyId="ko-d-ya" />
+            <flickSegment directions="w e w" keyId="ko-d-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-d-wae" />
+            <flickSegment directions="n e w" keyId="ko-d-wae" />
+            <flickSegment directions="s w ne" keyId="ko-d-we" />
+            <flickSegment directions="s w e" keyId="ko-d-we" />
+            <flickSegment directions="e w e w" keyId="ko-d-yae" />
+            <flickSegment directions="w e w e" keyId="ko-d-ye" />
+        </flick>
 
-            <flickSegment directions="n s" keyId="ko-oe" />
-            <flickSegment directions="s n" keyId="ko-wi" />
-            <flickSegment directions="e w" keyId="ko-ae" />
-            <flickSegment directions="w e" keyId="ko-e" />
-            <flickSegment directions="sw ne" keyId="ko-eui" />
-            <flickSegment directions="se nw" keyId="ko-eui" />
+        <flick id="moakey-r">
+            <flickSegment directions="n" keyId="ko-r-o" />
+            <flickSegment directions="e" keyId="ko-r-a" />
+            <flickSegment directions="s" keyId="ko-r-u" />
+            <flickSegment directions="w" keyId="ko-r-eo" />
+            <flickSegment directions="nw" keyId="ko-r-i" />
+            <flickSegment directions="ne" keyId="ko-r-i" />
+            <flickSegment directions="sw" keyId="ko-r-eu" />
+            <flickSegment directions="se" keyId="ko-r-eu" />
+            <flickSegment directions="n e" keyId="ko-r-wa" />
+            <flickSegment directions="s w" keyId="ko-r-wo" />
+            <flickSegment directions="n s" keyId="ko-r-oe" />
+            <flickSegment directions="s n" keyId="ko-r-wi" />
+            <flickSegment directions="e w" keyId="ko-r-ae" />
+            <flickSegment directions="w e" keyId="ko-r-e" />
+            <flickSegment directions="sw ne" keyId="ko-r-eui" />
+            <flickSegment directions="se nw" keyId="ko-r-eui" />
+            <flickSegment directions="n s n" keyId="ko-r-yo" />
+            <flickSegment directions="s n s" keyId="ko-r-yu" />
+            <flickSegment directions="e w e" keyId="ko-r-ya" />
+            <flickSegment directions="w e w" keyId="ko-r-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-r-wae" />
+            <flickSegment directions="n e w" keyId="ko-r-wae" />
+            <flickSegment directions="s w ne" keyId="ko-r-we" />
+            <flickSegment directions="s w e" keyId="ko-r-we" />
+            <flickSegment directions="e w e w" keyId="ko-r-yae" />
+            <flickSegment directions="w e w e" keyId="ko-r-ye" />
+        </flick>
 
-            <flickSegment directions="n s n" keyId="ko-yo" />
-            <flickSegment directions="s n s" keyId="ko-yu" />
-            <flickSegment directions="e w e" keyId="ko-ya" />
-            <flickSegment directions="w e w" keyId="ko-yeo" />
+        <flick id="moakey-m">
+            <flickSegment directions="n" keyId="ko-m-o" />
+            <flickSegment directions="e" keyId="ko-m-a" />
+            <flickSegment directions="s" keyId="ko-m-u" />
+            <flickSegment directions="w" keyId="ko-m-eo" />
+            <flickSegment directions="nw" keyId="ko-m-i" />
+            <flickSegment directions="ne" keyId="ko-m-i" />
+            <flickSegment directions="sw" keyId="ko-m-eu" />
+            <flickSegment directions="se" keyId="ko-m-eu" />
+            <flickSegment directions="n e" keyId="ko-m-wa" />
+            <flickSegment directions="s w" keyId="ko-m-wo" />
+            <flickSegment directions="n s" keyId="ko-m-oe" />
+            <flickSegment directions="s n" keyId="ko-m-wi" />
+            <flickSegment directions="e w" keyId="ko-m-ae" />
+            <flickSegment directions="w e" keyId="ko-m-e" />
+            <flickSegment directions="sw ne" keyId="ko-m-eui" />
+            <flickSegment directions="se nw" keyId="ko-m-eui" />
+            <flickSegment directions="n s n" keyId="ko-m-yo" />
+            <flickSegment directions="s n s" keyId="ko-m-yu" />
+            <flickSegment directions="e w e" keyId="ko-m-ya" />
+            <flickSegment directions="w e w" keyId="ko-m-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-m-wae" />
+            <flickSegment directions="n e w" keyId="ko-m-wae" />
+            <flickSegment directions="s w ne" keyId="ko-m-we" />
+            <flickSegment directions="s w e" keyId="ko-m-we" />
+            <flickSegment directions="e w e w" keyId="ko-m-yae" />
+            <flickSegment directions="w e w e" keyId="ko-m-ye" />
+        </flick>
 
-            <flickSegment directions="n e sw" keyId="ko-wae" />
-            <flickSegment directions="n e w" keyId="ko-wae" />
-            <flickSegment directions="s w ne" keyId="ko-we" />
-            <flickSegment directions="s w e" keyId="ko-we" />
+        <flick id="moakey-b">
+            <flickSegment directions="n" keyId="ko-b-o" />
+            <flickSegment directions="e" keyId="ko-b-a" />
+            <flickSegment directions="s" keyId="ko-b-u" />
+            <flickSegment directions="w" keyId="ko-b-eo" />
+            <flickSegment directions="nw" keyId="ko-b-i" />
+            <flickSegment directions="ne" keyId="ko-b-i" />
+            <flickSegment directions="sw" keyId="ko-b-eu" />
+            <flickSegment directions="se" keyId="ko-b-eu" />
+            <flickSegment directions="n e" keyId="ko-b-wa" />
+            <flickSegment directions="s w" keyId="ko-b-wo" />
+            <flickSegment directions="n s" keyId="ko-b-oe" />
+            <flickSegment directions="s n" keyId="ko-b-wi" />
+            <flickSegment directions="e w" keyId="ko-b-ae" />
+            <flickSegment directions="w e" keyId="ko-b-e" />
+            <flickSegment directions="sw ne" keyId="ko-b-eui" />
+            <flickSegment directions="se nw" keyId="ko-b-eui" />
+            <flickSegment directions="n s n" keyId="ko-b-yo" />
+            <flickSegment directions="s n s" keyId="ko-b-yu" />
+            <flickSegment directions="e w e" keyId="ko-b-ya" />
+            <flickSegment directions="w e w" keyId="ko-b-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-b-wae" />
+            <flickSegment directions="n e w" keyId="ko-b-wae" />
+            <flickSegment directions="s w ne" keyId="ko-b-we" />
+            <flickSegment directions="s w e" keyId="ko-b-we" />
+            <flickSegment directions="e w e w" keyId="ko-b-yae" />
+            <flickSegment directions="w e w e" keyId="ko-b-ye" />
+        </flick>
 
-            <flickSegment directions="e w e w" keyId="ko-yae" />
-            <flickSegment directions="w e w e" keyId="ko-ye" />
+        <flick id="moakey-s">
+            <flickSegment directions="n" keyId="ko-s-o" />
+            <flickSegment directions="e" keyId="ko-s-a" />
+            <flickSegment directions="s" keyId="ko-s-u" />
+            <flickSegment directions="w" keyId="ko-s-eo" />
+            <flickSegment directions="nw" keyId="ko-s-i" />
+            <flickSegment directions="ne" keyId="ko-s-i" />
+            <flickSegment directions="sw" keyId="ko-s-eu" />
+            <flickSegment directions="se" keyId="ko-s-eu" />
+            <flickSegment directions="n e" keyId="ko-s-wa" />
+            <flickSegment directions="s w" keyId="ko-s-wo" />
+            <flickSegment directions="n s" keyId="ko-s-oe" />
+            <flickSegment directions="s n" keyId="ko-s-wi" />
+            <flickSegment directions="e w" keyId="ko-s-ae" />
+            <flickSegment directions="w e" keyId="ko-s-e" />
+            <flickSegment directions="sw ne" keyId="ko-s-eui" />
+            <flickSegment directions="se nw" keyId="ko-s-eui" />
+            <flickSegment directions="n s n" keyId="ko-s-yo" />
+            <flickSegment directions="s n s" keyId="ko-s-yu" />
+            <flickSegment directions="e w e" keyId="ko-s-ya" />
+            <flickSegment directions="w e w" keyId="ko-s-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-s-wae" />
+            <flickSegment directions="n e w" keyId="ko-s-wae" />
+            <flickSegment directions="s w ne" keyId="ko-s-we" />
+            <flickSegment directions="s w e" keyId="ko-s-we" />
+            <flickSegment directions="e w e w" keyId="ko-s-yae" />
+            <flickSegment directions="w e w e" keyId="ko-s-ye" />
+        </flick>
+
+        <flick id="moakey-ng">
+            <flickSegment directions="n" keyId="ko-ng-o" />
+            <flickSegment directions="e" keyId="ko-ng-a" />
+            <flickSegment directions="s" keyId="ko-ng-u" />
+            <flickSegment directions="w" keyId="ko-ng-eo" />
+            <flickSegment directions="nw" keyId="ko-ng-i" />
+            <flickSegment directions="ne" keyId="ko-ng-i" />
+            <flickSegment directions="sw" keyId="ko-ng-eu" />
+            <flickSegment directions="se" keyId="ko-ng-eu" />
+            <flickSegment directions="n e" keyId="ko-ng-wa" />
+            <flickSegment directions="s w" keyId="ko-ng-wo" />
+            <flickSegment directions="n s" keyId="ko-ng-oe" />
+            <flickSegment directions="s n" keyId="ko-ng-wi" />
+            <flickSegment directions="e w" keyId="ko-ng-ae" />
+            <flickSegment directions="w e" keyId="ko-ng-e" />
+            <flickSegment directions="sw ne" keyId="ko-ng-eui" />
+            <flickSegment directions="se nw" keyId="ko-ng-eui" />
+            <flickSegment directions="n s n" keyId="ko-ng-yo" />
+            <flickSegment directions="s n s" keyId="ko-ng-yu" />
+            <flickSegment directions="e w e" keyId="ko-ng-ya" />
+            <flickSegment directions="w e w" keyId="ko-ng-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-ng-wae" />
+            <flickSegment directions="n e w" keyId="ko-ng-wae" />
+            <flickSegment directions="s w ne" keyId="ko-ng-we" />
+            <flickSegment directions="s w e" keyId="ko-ng-we" />
+            <flickSegment directions="e w e w" keyId="ko-ng-yae" />
+            <flickSegment directions="w e w e" keyId="ko-ng-ye" />
+        </flick>
+
+        <flick id="moakey-j">
+            <flickSegment directions="n" keyId="ko-j-o" />
+            <flickSegment directions="e" keyId="ko-j-a" />
+            <flickSegment directions="s" keyId="ko-j-u" />
+            <flickSegment directions="w" keyId="ko-j-eo" />
+            <flickSegment directions="nw" keyId="ko-j-i" />
+            <flickSegment directions="ne" keyId="ko-j-i" />
+            <flickSegment directions="sw" keyId="ko-j-eu" />
+            <flickSegment directions="se" keyId="ko-j-eu" />
+            <flickSegment directions="n e" keyId="ko-j-wa" />
+            <flickSegment directions="s w" keyId="ko-j-wo" />
+            <flickSegment directions="n s" keyId="ko-j-oe" />
+            <flickSegment directions="s n" keyId="ko-j-wi" />
+            <flickSegment directions="e w" keyId="ko-j-ae" />
+            <flickSegment directions="w e" keyId="ko-j-e" />
+            <flickSegment directions="sw ne" keyId="ko-j-eui" />
+            <flickSegment directions="se nw" keyId="ko-j-eui" />
+            <flickSegment directions="n s n" keyId="ko-j-yo" />
+            <flickSegment directions="s n s" keyId="ko-j-yu" />
+            <flickSegment directions="e w e" keyId="ko-j-ya" />
+            <flickSegment directions="w e w" keyId="ko-j-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-j-wae" />
+            <flickSegment directions="n e w" keyId="ko-j-wae" />
+            <flickSegment directions="s w ne" keyId="ko-j-we" />
+            <flickSegment directions="s w e" keyId="ko-j-we" />
+            <flickSegment directions="e w e w" keyId="ko-j-yae" />
+            <flickSegment directions="w e w e" keyId="ko-j-ye" />
+        </flick>
+
+        <flick id="moakey-ch">
+            <flickSegment directions="n" keyId="ko-ch-o" />
+            <flickSegment directions="e" keyId="ko-ch-a" />
+            <flickSegment directions="s" keyId="ko-ch-u" />
+            <flickSegment directions="w" keyId="ko-ch-eo" />
+            <flickSegment directions="nw" keyId="ko-ch-i" />
+            <flickSegment directions="ne" keyId="ko-ch-i" />
+            <flickSegment directions="sw" keyId="ko-ch-eu" />
+            <flickSegment directions="se" keyId="ko-ch-eu" />
+            <flickSegment directions="n e" keyId="ko-ch-wa" />
+            <flickSegment directions="s w" keyId="ko-ch-wo" />
+            <flickSegment directions="n s" keyId="ko-ch-oe" />
+            <flickSegment directions="s n" keyId="ko-ch-wi" />
+            <flickSegment directions="e w" keyId="ko-ch-ae" />
+            <flickSegment directions="w e" keyId="ko-ch-e" />
+            <flickSegment directions="sw ne" keyId="ko-ch-eui" />
+            <flickSegment directions="se nw" keyId="ko-ch-eui" />
+            <flickSegment directions="n s n" keyId="ko-ch-yo" />
+            <flickSegment directions="s n s" keyId="ko-ch-yu" />
+            <flickSegment directions="e w e" keyId="ko-ch-ya" />
+            <flickSegment directions="w e w" keyId="ko-ch-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-ch-wae" />
+            <flickSegment directions="n e w" keyId="ko-ch-wae" />
+            <flickSegment directions="s w ne" keyId="ko-ch-we" />
+            <flickSegment directions="s w e" keyId="ko-ch-we" />
+            <flickSegment directions="e w e w" keyId="ko-ch-yae" />
+            <flickSegment directions="w e w e" keyId="ko-ch-ye" />
+        </flick>
+
+        <flick id="moakey-k">
+            <flickSegment directions="n" keyId="ko-k-o" />
+            <flickSegment directions="e" keyId="ko-k-a" />
+            <flickSegment directions="s" keyId="ko-k-u" />
+            <flickSegment directions="w" keyId="ko-k-eo" />
+            <flickSegment directions="nw" keyId="ko-k-i" />
+            <flickSegment directions="ne" keyId="ko-k-i" />
+            <flickSegment directions="sw" keyId="ko-k-eu" />
+            <flickSegment directions="se" keyId="ko-k-eu" />
+            <flickSegment directions="n e" keyId="ko-k-wa" />
+            <flickSegment directions="s w" keyId="ko-k-wo" />
+            <flickSegment directions="n s" keyId="ko-k-oe" />
+            <flickSegment directions="s n" keyId="ko-k-wi" />
+            <flickSegment directions="e w" keyId="ko-k-ae" />
+            <flickSegment directions="w e" keyId="ko-k-e" />
+            <flickSegment directions="sw ne" keyId="ko-k-eui" />
+            <flickSegment directions="se nw" keyId="ko-k-eui" />
+            <flickSegment directions="n s n" keyId="ko-k-yo" />
+            <flickSegment directions="s n s" keyId="ko-k-yu" />
+            <flickSegment directions="e w e" keyId="ko-k-ya" />
+            <flickSegment directions="w e w" keyId="ko-k-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-k-wae" />
+            <flickSegment directions="n e w" keyId="ko-k-wae" />
+            <flickSegment directions="s w ne" keyId="ko-k-we" />
+            <flickSegment directions="s w e" keyId="ko-k-we" />
+            <flickSegment directions="e w e w" keyId="ko-k-yae" />
+            <flickSegment directions="w e w e" keyId="ko-k-ye" />
+        </flick>
+
+        <flick id="moakey-t">
+            <flickSegment directions="n" keyId="ko-t-o" />
+            <flickSegment directions="e" keyId="ko-t-a" />
+            <flickSegment directions="s" keyId="ko-t-u" />
+            <flickSegment directions="w" keyId="ko-t-eo" />
+            <flickSegment directions="nw" keyId="ko-t-i" />
+            <flickSegment directions="ne" keyId="ko-t-i" />
+            <flickSegment directions="sw" keyId="ko-t-eu" />
+            <flickSegment directions="se" keyId="ko-t-eu" />
+            <flickSegment directions="n e" keyId="ko-t-wa" />
+            <flickSegment directions="s w" keyId="ko-t-wo" />
+            <flickSegment directions="n s" keyId="ko-t-oe" />
+            <flickSegment directions="s n" keyId="ko-t-wi" />
+            <flickSegment directions="e w" keyId="ko-t-ae" />
+            <flickSegment directions="w e" keyId="ko-t-e" />
+            <flickSegment directions="sw ne" keyId="ko-t-eui" />
+            <flickSegment directions="se nw" keyId="ko-t-eui" />
+            <flickSegment directions="n s n" keyId="ko-t-yo" />
+            <flickSegment directions="s n s" keyId="ko-t-yu" />
+            <flickSegment directions="e w e" keyId="ko-t-ya" />
+            <flickSegment directions="w e w" keyId="ko-t-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-t-wae" />
+            <flickSegment directions="n e w" keyId="ko-t-wae" />
+            <flickSegment directions="s w ne" keyId="ko-t-we" />
+            <flickSegment directions="s w e" keyId="ko-t-we" />
+            <flickSegment directions="e w e w" keyId="ko-t-yae" />
+            <flickSegment directions="w e w e" keyId="ko-t-ye" />
+        </flick>
+
+        <flick id="moakey-p">
+            <flickSegment directions="n" keyId="ko-p-o" />
+            <flickSegment directions="e" keyId="ko-p-a" />
+            <flickSegment directions="s" keyId="ko-p-u" />
+            <flickSegment directions="w" keyId="ko-p-eo" />
+            <flickSegment directions="nw" keyId="ko-p-i" />
+            <flickSegment directions="ne" keyId="ko-p-i" />
+            <flickSegment directions="sw" keyId="ko-p-eu" />
+            <flickSegment directions="se" keyId="ko-p-eu" />
+            <flickSegment directions="n e" keyId="ko-p-wa" />
+            <flickSegment directions="s w" keyId="ko-p-wo" />
+            <flickSegment directions="n s" keyId="ko-p-oe" />
+            <flickSegment directions="s n" keyId="ko-p-wi" />
+            <flickSegment directions="e w" keyId="ko-p-ae" />
+            <flickSegment directions="w e" keyId="ko-p-e" />
+            <flickSegment directions="sw ne" keyId="ko-p-eui" />
+            <flickSegment directions="se nw" keyId="ko-p-eui" />
+            <flickSegment directions="n s n" keyId="ko-p-yo" />
+            <flickSegment directions="s n s" keyId="ko-p-yu" />
+            <flickSegment directions="e w e" keyId="ko-p-ya" />
+            <flickSegment directions="w e w" keyId="ko-p-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-p-wae" />
+            <flickSegment directions="n e w" keyId="ko-p-wae" />
+            <flickSegment directions="s w ne" keyId="ko-p-we" />
+            <flickSegment directions="s w e" keyId="ko-p-we" />
+            <flickSegment directions="e w e w" keyId="ko-p-yae" />
+            <flickSegment directions="w e w e" keyId="ko-p-ye" />
+        </flick>
+
+        <flick id="moakey-h">
+            <flickSegment directions="n" keyId="ko-h-o" />
+            <flickSegment directions="e" keyId="ko-h-a" />
+            <flickSegment directions="s" keyId="ko-h-u" />
+            <flickSegment directions="w" keyId="ko-h-eo" />
+            <flickSegment directions="nw" keyId="ko-h-i" />
+            <flickSegment directions="ne" keyId="ko-h-i" />
+            <flickSegment directions="sw" keyId="ko-h-eu" />
+            <flickSegment directions="se" keyId="ko-h-eu" />
+            <flickSegment directions="n e" keyId="ko-h-wa" />
+            <flickSegment directions="s w" keyId="ko-h-wo" />
+            <flickSegment directions="n s" keyId="ko-h-oe" />
+            <flickSegment directions="s n" keyId="ko-h-wi" />
+            <flickSegment directions="e w" keyId="ko-h-ae" />
+            <flickSegment directions="w e" keyId="ko-h-e" />
+            <flickSegment directions="sw ne" keyId="ko-h-eui" />
+            <flickSegment directions="se nw" keyId="ko-h-eui" />
+            <flickSegment directions="n s n" keyId="ko-h-yo" />
+            <flickSegment directions="s n s" keyId="ko-h-yu" />
+            <flickSegment directions="e w e" keyId="ko-h-ya" />
+            <flickSegment directions="w e w" keyId="ko-h-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-h-wae" />
+            <flickSegment directions="n e w" keyId="ko-h-wae" />
+            <flickSegment directions="s w ne" keyId="ko-h-we" />
+            <flickSegment directions="s w e" keyId="ko-h-we" />
+            <flickSegment directions="e w e w" keyId="ko-h-yae" />
+            <flickSegment directions="w e w e" keyId="ko-h-ye" />
+        </flick>
+
+        <flick id="moakey-gg">
+            <flickSegment directions="n" keyId="ko-gg-o" />
+            <flickSegment directions="e" keyId="ko-gg-a" />
+            <flickSegment directions="s" keyId="ko-gg-u" />
+            <flickSegment directions="w" keyId="ko-gg-eo" />
+            <flickSegment directions="nw" keyId="ko-gg-i" />
+            <flickSegment directions="ne" keyId="ko-gg-i" />
+            <flickSegment directions="sw" keyId="ko-gg-eu" />
+            <flickSegment directions="se" keyId="ko-gg-eu" />
+            <flickSegment directions="n e" keyId="ko-gg-wa" />
+            <flickSegment directions="s w" keyId="ko-gg-wo" />
+            <flickSegment directions="n s" keyId="ko-gg-oe" />
+            <flickSegment directions="s n" keyId="ko-gg-wi" />
+            <flickSegment directions="e w" keyId="ko-gg-ae" />
+            <flickSegment directions="w e" keyId="ko-gg-e" />
+            <flickSegment directions="sw ne" keyId="ko-gg-eui" />
+            <flickSegment directions="se nw" keyId="ko-gg-eui" />
+            <flickSegment directions="n s n" keyId="ko-gg-yo" />
+            <flickSegment directions="s n s" keyId="ko-gg-yu" />
+            <flickSegment directions="e w e" keyId="ko-gg-ya" />
+            <flickSegment directions="w e w" keyId="ko-gg-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-gg-wae" />
+            <flickSegment directions="n e w" keyId="ko-gg-wae" />
+            <flickSegment directions="s w ne" keyId="ko-gg-we" />
+            <flickSegment directions="s w e" keyId="ko-gg-we" />
+            <flickSegment directions="e w e w" keyId="ko-gg-yae" />
+            <flickSegment directions="w e w e" keyId="ko-gg-ye" />
+        </flick>
+
+        <flick id="moakey-dd">
+            <flickSegment directions="n" keyId="ko-dd-o" />
+            <flickSegment directions="e" keyId="ko-dd-a" />
+            <flickSegment directions="s" keyId="ko-dd-u" />
+            <flickSegment directions="w" keyId="ko-dd-eo" />
+            <flickSegment directions="nw" keyId="ko-dd-i" />
+            <flickSegment directions="ne" keyId="ko-dd-i" />
+            <flickSegment directions="sw" keyId="ko-dd-eu" />
+            <flickSegment directions="se" keyId="ko-dd-eu" />
+            <flickSegment directions="n e" keyId="ko-dd-wa" />
+            <flickSegment directions="s w" keyId="ko-dd-wo" />
+            <flickSegment directions="n s" keyId="ko-dd-oe" />
+            <flickSegment directions="s n" keyId="ko-dd-wi" />
+            <flickSegment directions="e w" keyId="ko-dd-ae" />
+            <flickSegment directions="w e" keyId="ko-dd-e" />
+            <flickSegment directions="sw ne" keyId="ko-dd-eui" />
+            <flickSegment directions="se nw" keyId="ko-dd-eui" />
+            <flickSegment directions="n s n" keyId="ko-dd-yo" />
+            <flickSegment directions="s n s" keyId="ko-dd-yu" />
+            <flickSegment directions="e w e" keyId="ko-dd-ya" />
+            <flickSegment directions="w e w" keyId="ko-dd-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-dd-wae" />
+            <flickSegment directions="n e w" keyId="ko-dd-wae" />
+            <flickSegment directions="s w ne" keyId="ko-dd-we" />
+            <flickSegment directions="s w e" keyId="ko-dd-we" />
+            <flickSegment directions="e w e w" keyId="ko-dd-yae" />
+            <flickSegment directions="w e w e" keyId="ko-dd-ye" />
+        </flick>
+
+        <flick id="moakey-bb">
+            <flickSegment directions="n" keyId="ko-bb-o" />
+            <flickSegment directions="e" keyId="ko-bb-a" />
+            <flickSegment directions="s" keyId="ko-bb-u" />
+            <flickSegment directions="w" keyId="ko-bb-eo" />
+            <flickSegment directions="nw" keyId="ko-bb-i" />
+            <flickSegment directions="ne" keyId="ko-bb-i" />
+            <flickSegment directions="sw" keyId="ko-bb-eu" />
+            <flickSegment directions="se" keyId="ko-bb-eu" />
+            <flickSegment directions="n e" keyId="ko-bb-wa" />
+            <flickSegment directions="s w" keyId="ko-bb-wo" />
+            <flickSegment directions="n s" keyId="ko-bb-oe" />
+            <flickSegment directions="s n" keyId="ko-bb-wi" />
+            <flickSegment directions="e w" keyId="ko-bb-ae" />
+            <flickSegment directions="w e" keyId="ko-bb-e" />
+            <flickSegment directions="sw ne" keyId="ko-bb-eui" />
+            <flickSegment directions="se nw" keyId="ko-bb-eui" />
+            <flickSegment directions="n s n" keyId="ko-bb-yo" />
+            <flickSegment directions="s n s" keyId="ko-bb-yu" />
+            <flickSegment directions="e w e" keyId="ko-bb-ya" />
+            <flickSegment directions="w e w" keyId="ko-bb-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-bb-wae" />
+            <flickSegment directions="n e w" keyId="ko-bb-wae" />
+            <flickSegment directions="s w ne" keyId="ko-bb-we" />
+            <flickSegment directions="s w e" keyId="ko-bb-we" />
+            <flickSegment directions="e w e w" keyId="ko-bb-yae" />
+            <flickSegment directions="w e w e" keyId="ko-bb-ye" />
+        </flick>
+
+        <flick id="moakey-ss">
+            <flickSegment directions="n" keyId="ko-ss-o" />
+            <flickSegment directions="e" keyId="ko-ss-a" />
+            <flickSegment directions="s" keyId="ko-ss-u" />
+            <flickSegment directions="w" keyId="ko-ss-eo" />
+            <flickSegment directions="nw" keyId="ko-ss-i" />
+            <flickSegment directions="ne" keyId="ko-ss-i" />
+            <flickSegment directions="sw" keyId="ko-ss-eu" />
+            <flickSegment directions="se" keyId="ko-ss-eu" />
+            <flickSegment directions="n e" keyId="ko-ss-wa" />
+            <flickSegment directions="s w" keyId="ko-ss-wo" />
+            <flickSegment directions="n s" keyId="ko-ss-oe" />
+            <flickSegment directions="s n" keyId="ko-ss-wi" />
+            <flickSegment directions="e w" keyId="ko-ss-ae" />
+            <flickSegment directions="w e" keyId="ko-ss-e" />
+            <flickSegment directions="sw ne" keyId="ko-ss-eui" />
+            <flickSegment directions="se nw" keyId="ko-ss-eui" />
+            <flickSegment directions="n s n" keyId="ko-ss-yo" />
+            <flickSegment directions="s n s" keyId="ko-ss-yu" />
+            <flickSegment directions="e w e" keyId="ko-ss-ya" />
+            <flickSegment directions="w e w" keyId="ko-ss-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-ss-wae" />
+            <flickSegment directions="n e w" keyId="ko-ss-wae" />
+            <flickSegment directions="s w ne" keyId="ko-ss-we" />
+            <flickSegment directions="s w e" keyId="ko-ss-we" />
+            <flickSegment directions="e w e w" keyId="ko-ss-yae" />
+            <flickSegment directions="w e w e" keyId="ko-ss-ye" />
+        </flick>
+
+        <flick id="moakey-jj">
+            <flickSegment directions="n" keyId="ko-jj-o" />
+            <flickSegment directions="e" keyId="ko-jj-a" />
+            <flickSegment directions="s" keyId="ko-jj-u" />
+            <flickSegment directions="w" keyId="ko-jj-eo" />
+            <flickSegment directions="nw" keyId="ko-jj-i" />
+            <flickSegment directions="ne" keyId="ko-jj-i" />
+            <flickSegment directions="sw" keyId="ko-jj-eu" />
+            <flickSegment directions="se" keyId="ko-jj-eu" />
+            <flickSegment directions="n e" keyId="ko-jj-wa" />
+            <flickSegment directions="s w" keyId="ko-jj-wo" />
+            <flickSegment directions="n s" keyId="ko-jj-oe" />
+            <flickSegment directions="s n" keyId="ko-jj-wi" />
+            <flickSegment directions="e w" keyId="ko-jj-ae" />
+            <flickSegment directions="w e" keyId="ko-jj-e" />
+            <flickSegment directions="sw ne" keyId="ko-jj-eui" />
+            <flickSegment directions="se nw" keyId="ko-jj-eui" />
+            <flickSegment directions="n s n" keyId="ko-jj-yo" />
+            <flickSegment directions="s n s" keyId="ko-jj-yu" />
+            <flickSegment directions="e w e" keyId="ko-jj-ya" />
+            <flickSegment directions="w e w" keyId="ko-jj-yeo" />
+            <flickSegment directions="n e sw" keyId="ko-jj-wae" />
+            <flickSegment directions="n e w" keyId="ko-jj-wae" />
+            <flickSegment directions="s w ne" keyId="ko-jj-we" />
+            <flickSegment directions="s w e" keyId="ko-jj-we" />
+            <flickSegment directions="e w e w" keyId="ko-jj-yae" />
+            <flickSegment directions="w e w e" keyId="ko-jj-ye" />
+        </flick>
+        <flick id="moakey-moeum">
+            <flickSegment directions="w" keyId="ko-i" />
+            <flickSegment directions="e" keyId="ko-eu" />
         </flick>
     </flicks>
 
@@ -165,4 +1082,80 @@
         </layer>
     </layers>
 
+    <variables>
+        <set id="cho"
+            value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1104} \u{1105} \u{1106} \u{1107} \u{1108} \u{1109} \u{110A} \u{110B} \u{110C} \u{110D} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+        <set id="jung"
+            value="\u{1161} \u{1162} \u{1163} \u{1164} \u{1165} \u{1166} \u{1167} \u{1168} \u{1169} \u{116A} \u{116B} \u{116C} \u{116D} \u{116E} \u{116F} \u{1170} \u{1171} \u{1172} \u{1173} \u{1174} \u{1175} \u{119E}" />
+        <set id="cho_for_jong"
+            value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1105} \u{1106} \u{1107} \u{1109} \u{110A} \u{110B} \u{110C} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+        <set id="jong_mapped"
+            value="\u{11A8} \u{11A9} \u{11AB} \u{11AE} \u{11AF} \u{11B7} \u{11B8} \u{11BA} \u{11BB} \u{11BC} \u{11BD} \u{11BE} \u{11BF} \u{11C0} \u{11C1} \u{11C2}" />
+        <set id="jong_single"
+            value="\u{11A8} \u{11A9} \u{11AB} \u{11AE} \u{11AF} \u{11B7} \u{11B8} \u{11BA} \u{11BB} \u{11BC} \u{11BD} \u{11BE} \u{11BF} \u{11C0} \u{11C1} \u{11C2}" />
+        <set id="cho_mapped"
+            value="\u{1100} \u{1101} \u{1102} \u{1103} \u{1105} \u{1106} \u{1107} \u{1109} \u{110A} \u{110B} \u{110C} \u{110E} \u{110F} \u{1110} \u{1111} \u{1112}" />
+    </variables>
+
+    <transforms type="simple">
+        <transformGroup>
+            <!-- 모음 합성 -->
+            <transform from="\u{119E}\u{119E}" to="\u{11A2}" />
+            <transform from="\u{1175}\u{119E}" to="\u{1161}" />
+            <transform from="\u{1161}\u{119E}" to="\u{1163}" />
+            <transform from="\u{119E}\u{1175}" to="\u{1165}" />
+            <transform from="\u{11A2}\u{1175}" to="\u{1167}" />
+            <transform from="\u{119E}\u{1173}" to="\u{1169}" />
+            <transform from="\u{11A2}\u{1173}" to="\u{116D}" />
+            <transform from="\u{1173}\u{119E}" to="\u{116E}" />
+            <transform from="\u{116E}\u{119E}" to="\u{1172}" />
+            <transform from="\u{1161}\u{1175}" to="\u{1162}" />
+            <transform from="\u{1163}\u{1175}" to="\u{1164}" />
+            <transform from="\u{1165}\u{1175}" to="\u{1166}" />
+            <transform from="\u{1167}\u{1175}" to="\u{1168}" />
+            <transform from="\u{1169}\u{1175}" to="\u{116C}" />
+            <transform from="\u{116C}\u{119E}" to="\u{116A}" />
+            <transform from="\u{116A}\u{1175}" to="\u{116B}" />
+            <transform from="\u{116E}\u{1175}" to="\u{1171}" />
+            <transform from="\u{1172}\u{1175}" to="\u{116F}" />
+            <transform from="\u{116F}\u{1175}" to="\u{1170}" />
+            <transform from="\u{1173}\u{1175}" to="\u{1174}" />
+
+            <!-- 종성 자리 자음(초성)을 종성으로 이동 -->
+            <transform from="($[cho])($[jung])($[cho_for_jong])" to="$1$2$[3:jong_mapped]" />
+            <!-- 종성 분리로 생성된 초성 뒤에 중성이 붙으면 마커 해제 -->
+            <transform from="\m{doubled}($[jung])" to="$1" />
+
+            <!-- 이중 종성 생성 -->
+            <transform from="\u{11A8}\u{1109}" to="\u{11AA}" /> <!-- ᆨㅅ → ᆪ -->
+            <transform from="\u{11AB}\u{110C}" to="\u{11AC}" /> <!-- ᆫㅈ → ᆬ -->
+            <transform from="\u{11AB}\u{1112}" to="\u{11AD}" /> <!-- ᆫㅎ → ᆭ -->
+            <transform from="\u{11AF}\u{1100}" to="\u{11B0}" /> <!-- ᆯㄱ → ᆰ -->
+            <transform from="\u{11AF}\u{1106}" to="\u{11B1}" /> <!-- ᆯㅁ → ᆱ -->
+            <transform from="\u{11AF}\u{1107}" to="\u{11B2}" /> <!-- ᆯㅂ → ᆲ -->
+            <transform from="\u{11AF}\u{1109}" to="\u{11B3}" /> <!-- ᆯㅅ → ᆳ -->
+            <transform from="\u{11AF}\u{1110}" to="\u{11B4}" /> <!-- ᆯㅌ → ᆴ -->
+            <transform from="\u{11AF}\u{1111}" to="\u{11B5}" /> <!-- ᆯㅍ → ᆵ -->
+            <transform from="\u{11AF}\u{1112}" to="\u{11B6}" /> <!-- ᆯㅎ → ᆶ -->
+            <transform from="\u{11B8}\u{1109}" to="\u{11B9}" /> <!-- ᆸㅅ → ᆹ -->
+
+            <!-- 연음 -->
+            <transform from="($[jong_single])($[jung])" to="$[1:cho_mapped]$2" />
+            <transform from="\u{11AA}($[jung])" to="\u{11A8}\u{1109}$1" /> <!-- ㄳ → ㄱㅅ -->
+            <transform from="\u{11AC}($[jung])" to="\u{11AB}\u{110C}$1" /> <!-- ㄵ → ㄴㅈ -->
+            <transform from="\u{11AD}($[jung])" to="\u{11AB}\u{1112}$1" /> <!-- ㄶ → ㄴㅎ -->
+            <transform from="\u{11B0}($[jung])" to="\u{11AF}\u{1100}$1" /> <!-- ㄺ → ㄹㄱ -->
+            <transform from="\u{11B1}($[jung])" to="\u{11AF}\u{1106}$1" /> <!-- ㄻ → ㄹㅁ -->
+            <transform from="\u{11B2}($[jung])" to="\u{11AF}\u{1107}$1" /> <!-- ㄼ → ㄹㅂ -->
+            <transform from="\u{11B3}($[jung])" to="\u{11AF}\u{1109}$1" /> <!-- ㄽ → ㄹㅅ -->
+            <transform from="\u{11B4}($[jung])" to="\u{11AF}\u{1110}$1" /> <!-- ㄾ → ㄹㅌ -->
+            <transform from="\u{11B5}($[jung])" to="\u{11AF}\u{1111}$1" /> <!-- ㄿ → ㄹㅍ -->
+            <transform from="\u{11B6}($[jung])" to="\u{11AF}\u{1112}$1" /> <!-- ㅀ → ㄹㅎ -->
+            <transform from="\u{11B9}($[jung])" to="\u{11B8}\u{1109}$1" /> <!-- ㅄ → ㅂㅅ -->
+
+            <!-- 처리 완료 후 마커 및 스페이스 정리 -->
+            <transform from="\m{break}\m{break}" to=" " />
+            <transform from=" \m{break}" to="  " />
+        </transformGroup>
+    </transforms>
 </keyboard3>

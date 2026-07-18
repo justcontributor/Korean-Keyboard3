@@ -3,6 +3,7 @@
 <keyboard3 locale="ko" conformsTo="48">
     <info name="Korean Chunjiin Plus Keyboard" indicator="KO" />
     <!-- 한국어 천지인 플러스 키보드 (조합형 낱자 기반) -->
+    <!-- INFO: 조합형으로 구현되었으므로 시스템에서 조합형 입력 및 글꼴을 지원해야 합니다. -->
     <displays>
         <display keyId="base" display="한글" />
         <display keyId="shift" display="\u{21EA}" />
