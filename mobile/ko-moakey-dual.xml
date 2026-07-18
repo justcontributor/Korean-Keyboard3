@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard3 SYSTEM "https://raw.githubusercontent.com/unicode-org/cldr/main/keyboards/dtd/ldmlKeyboard3.dtd">
 <keyboard3 locale="ko" conformsTo="48">
-    <info name="Korean Moakey Keyboard" indicator="KO" />
-    <!-- 한국어 모아키 키보드 -->
+    <info name="Korean Dual Moakey Keyboard" indicator="KO" />
+    <!-- 한국어 양손 모아키 키보드 -->
     <!-- INFO: 조합형으로 구현되었으므로 시스템에서 조합형 입력 및 글꼴을 지원해야 합니다. -->
     <displays>
         <display keyId="base" display="한글" />
@@ -444,8 +444,8 @@
         <key id="ko-a" output="\u{1161}" />
         <key id="ko-u" output="\u{116E}" />
         <key id="ko-eo" output="\u{1165}" />
-        <key id="ko-i" output="\u{1175}" />
-        <key id="ko-eu" output="\u{1173}" />
+        <key id="ko-i" flickId="moakey-i" output="\u{1175}" />
+        <key id="ko-eu" flickId="moakey-eu" output="\u{1173}" />
         <key id="ko-wa" output="\u{116A}" />
         <key id="ko-wo" output="\u{116F}" />
         <key id="ko-oe" output="\u{116C}" />
@@ -457,11 +457,14 @@
         <key id="ko-yu" output="\u{1172}" />
         <key id="ko-ya" output="\u{1163}" />
         <key id="ko-yeo" output="\u{1167}" />
+        <key id="ko-eu-i-area" output="\m{eu_i_area}" />
+        <key id="ko-eu-i-area-i" output="\m{eu_i_area_i}" />
+
         <key id="ko-wae" output="\u{116B}" />
         <key id="ko-we" output="\u{1170}" />
         <key id="ko-yae" output="\u{1164}" />
         <key id="ko-ye" output="\u{1168}" />
-        <key id="ko-area" output="\u{119E}" />
+        <key id="ko-area" flickId="moakey-area" output="\u{119E}" />
         <key id="moeum" flickId="moakey-moeum" output="\u{119E}" />
 
         <key id="base" layerId="base" />
@@ -471,7 +474,7 @@
         <key id="symbol-1" layerId="symbol-1" />
         <key id="symbol-2" layerId="symbol-2" />
 
-        <key id="bksp" output="@k3lp:action/backspace" width="2" />
+        <key id="bksp" output="@k3lp:action/backspace" />
         <key id="extra" layerId="english-base" />
         <key id="enter" output="\u{000A}" />
         <key id="space" output="\m{break}" width="3" />
@@ -514,6 +517,7 @@
         <key id="dquote" output='"' />
         <key id="tilde" output="~" />
         <key id="heart" output="❤️" />
+        <key id="punc" flickId="moakey-punc" output="." />
     </keys>
 
     <flicks>
@@ -1067,19 +1071,46 @@
             <flickSegment directions="e w e w" keyId="ko-jj-yae" />
             <flickSegment directions="w e w e" keyId="ko-jj-ye" />
         </flick>
-        <flick id="moakey-moeum">
-            <flickSegment directions="w" keyId="ko-i" />
-            <flickSegment directions="e" keyId="ko-eu" />
+        <flick id="moakey-i">
+            <flickSegment directions="s" keyId="ko-a" />
+            <flickSegment directions="s n" keyId="ko-ae" />
+            <flickSegment directions="s n s" keyId="ko-yae" />
+        </flick>
+        <flick id="moakey-area">
+            <flickSegment directions="n" keyId="ko-eo" />
+            <flickSegment directions="n s" keyId="ko-yeo" />
+            <flickSegment directions="n s n" keyId="ko-ye" />
+            <flickSegment directions="w" keyId="ko-o" />
+            <flickSegment directions="w e" keyId="ko-yo" />
+            <flickSegment directions="w ne" keyId="ko-oe" />
+            <flickSegment directions="w ne s" keyId="ko-wa" />
+            <flickSegment directions="w ne s n" keyId="ko-wae" />
+        </flick>
+        <flick id="moakey-eu">
+            <flickSegment directions="e" keyId="ko-u" />
+            <flickSegment directions="ne" keyId="ko-eui" />
+            <flickSegment directions="ne s" keyId="ko-eu-i-area" />
+            <flickSegment directions="ne s n" keyId="ko-eu-i-area-i" />
+
+            <flickSegment directions="e n" keyId="ko-wi" />
+            <flickSegment directions="e n s" keyId="ko-wo" />
+            <flickSegment directions="e n s n" keyId="ko-we" />
+        </flick>
+        <flick id="moakey-punc">
+            <flickSegment directions="n" keyId="comma" />
+            <flickSegment directions="e" keyId="bang" />
+            <flickSegment directions="s" keyId="period" />
+            <flickSegment directions="w" keyId="question" />
         </flick>
     </flicks>
 
     <layers formId="touch">
         <layer id="base">
-            <row keys="tilde ko-bb ko-jj ko-dd ko-gg ko-ss bang" />
-            <row keys="caret ko-b ko-j ko-d ko-g ko-s question" />
-            <row keys="semicolon ko-m ko-n ko-ng ko-r ko-h period" />
-            <row keys="asterisk ko-k ko-t ko-ch ko-p bksp" />
-            <row keys="symbol extra space moeum enter" />
+            <row keys="tilde ko-bb ko-jj ko-dd ko-gg ko-ss hash" />
+            <row keys="caret ko-b ko-j ko-d ko-g ko-s bksp" />
+            <row keys="semicolon ko-m ko-n ko-ng ko-r ko-h ko-i" />
+            <row keys="asterisk ko-k ko-t ko-ch ko-p ko-eu ko-area" />
+            <row keys="symbol extra space punc enter" />
         </layer>
     </layers>
 
@@ -1121,6 +1152,57 @@
             <transform from="\u{1172}\u{1175}" to="\u{116F}" />
             <transform from="\u{116F}\u{1175}" to="\u{1170}" />
             <transform from="\u{1173}\u{1175}" to="\u{1174}" />
+
+            <!-- 양손 모아키 모음 합성 -->
+            <!-- ㅑ -->
+            <transform from="\u{1175}\u{11A2}" to="\u{1163}" /> <!-- ㅣ + : -> ㅑ -->
+            <!-- ㅕ -->
+            <transform from="\u{119E}\u{1161}" to="\u{1167}" /> <!-- ㆍ + ㅏ -> ㅕ -->
+            <transform from="\u{119E}\u{1165}" to="\u{1167}" /> <!-- ㆍ + ㅓ -> ㅕ -->
+            <transform from="\u{1165}\u{119E}" to="\u{1167}" /> <!-- ㅓ + ㆍ -> ㅕ -->
+            <!-- ㅛ -->
+            <transform from="\u{119E}\u{116E}" to="\u{116D}" /> <!-- ㆍ + ㅜ -> ㅛ -->
+            <transform from="\u{119E}\u{1169}" to="\u{116D}" /> <!-- ㆍ + ㅗ -> ㅛ -->
+            <transform from="\u{1169}\u{119E}" to="\u{116D}" /> <!-- ㅗ + ㆍ -> ㅛ -->
+            <!-- ㅠ -->
+            <transform from="\u{1173}\u{11A2}" to="\u{1172}" /> <!-- ㅡ + : -> ㅠ -->
+            <!-- ㅐ -->
+            <transform from="\u{1175}\u{1165}" to="\u{1162}" /> <!-- ㅣ + ㅓ -> ㅐ -->
+            <!-- ㅚ -->
+            <transform from="\u{119E}\u{1174}" to="\u{116C}" /> <!-- ㆍ + ㅢ -> ㅚ -->
+            <!-- ㅟ -->
+            <transform from="\u{1173}\u{1175}" to="\u{1174}" /> <!-- ㅡ + ㅣ -> ㅢ -->
+            <transform from="\u{1173}\u{1165}" to="\u{1171}" /> <!-- ㅡ + ㅓ -> ㅟ -->
+            <!-- ㅒ -->
+            <transform from="\u{1175}\u{1167}" to="\u{1164}" /> <!-- ㅣ + ㅕ -> ㅒ -->
+            <transform from="\u{1161}\u{1161}" to="\u{1164}" /> <!-- ㅏ + ㅏ -> ㅒ -->
+            <transform from="\u{1162}\u{119E}" to="\u{1164}" /> <!-- ㅐ + ㆍ -> ㅒ -->
+            <!-- ㅖ -->
+            <transform from="\u{119E}\u{1162}" to="\u{1168}" /> <!-- ㆍ + ㅐ -> ㅖ -->
+            <transform from="\u{1165}\u{1165}" to="\u{1168}" /> <!-- ㅓ + ㅓ -> ㅖ -->
+            <transform from="\u{1167}\u{1175}" to="\u{1168}" /> <!-- ㅕ + ㅣ -> ㅖ -->
+            <!-- ㅘ -->
+            <transform from="\u{119E}\m{eu_i_area}" to="\u{116A}" /> <!-- ㆍ + ㅡㅣㆍ -> ㅘ -->
+            <transform from="\u{1169}\u{1161}" to="\u{116A}" /> <!-- ㅗ + ㅏ -> ㅘ -->
+            <transform from="\u{1174}\u{119E}" to="\u{116A}" /> <!-- ㅢ + ㆍ -> ㅘ -->
+            <!-- ㅝ -->
+            <transform from="\u{1173}\u{1167}" to="\u{116F}" /> <!-- ㅡ + ㅕ -> ㅝ -->
+            <transform from="\u{116E}\u{1161}" to="\u{116F}" /> <!-- ㅜ + ㅏ -> ㅝ -->
+            <transform from="\u{116E}\u{1165}" to="\u{116F}" /> <!-- ㅜ + ㅓ -> ㅝ -->
+            <transform from="\u{1171}\u{119E}" to="\u{116F}" /> <!-- ㅟ + ㆍ -> ㅝ -->
+            <!-- ㅙ -->
+            <transform from="\u{119E}\m{eu_i_area_i}" to="\u{116B}" /> <!-- ㆍ + ㅡㅣㆍㅣ -> ㅙ -->
+            <transform from="\u{1173}\u{1162}" to="\u{116B}" /> <!-- ㅡ + ㅐ -> ㅙ -->
+            <transform from="\u{1169}\u{1162}" to="\u{116B}" /> <!-- ㅗ + ㅐ -> ㅙ -->
+            <transform from="\u{1174}\u{1161}" to="\u{116B}" /> <!-- ㅢ + ㅏ -> ㅙ -->
+            <transform from="\u{116C}\u{1165}" to="\u{116B}" /> <!-- ㅚ + ㅓ -> ㅙ -->
+            <transform from="\u{116A}\u{1175}" to="\u{116B}" /> <!-- ㅘ + ㅣ -> ㅙ -->
+            <!-- ㅞ -->
+            <transform from="\u{1173}\u{1168}" to="\u{1170}" /> <!-- ㅡ + ㅖ -> ㅞ -->
+            <transform from="\u{116E}\u{1166}" to="\u{1170}" /> <!-- ㅜ + ㅔ -> ㅞ -->
+            <transform from="\u{116E}\u{1162}" to="\u{1170}" /> <!-- ㅜ + ㅐ -> ㅞ -->
+            <transform from="\u{1171}\u{1165}" to="\u{1170}" /> <!-- ㅟ + ㅓ -> ㅞ -->
+            <transform from="\u{116F}\u{1175}" to="\u{1170}" /> <!-- ㅝ + ㅣ -> ㅞ -->
 
             <!-- 종성 자리 자음(초성)을 종성으로 이동 -->
             <transform from="($[cho])($[jung])($[cho_for_jong])" to="$1$2$[3:jong_mapped]" />
